@@ -62,30 +62,29 @@ for($i=1;$i<=8;$i++){
         </a>
         <a href="inner.html">
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 construction">
-            <div class="shadowDivConstruction"></div>
+            <div class="shadowDivConstruction" style="<?php echo 'background-color: '.$titan->getOption( 'feat4_color' ).';' ?>"></div>
             <div class="constructionUpperDiv">
 
-                <img src="resource/images/common/construction.png">
+                <img src="<?php echo esc_url( $imageSrcfeat[4] ); ?>">
 
 
                 <div class="hoverDivConstruction">
-                    <p><b>CONSTRUCTION</b></p>
+                    <p><b><?php echo $titan->getOption( 'feat4_title1_text' ); ?></b></p>
                 </div>
-                <p class="hoverBottomDiv">Engineering and construction</p>
-                <p class="hoverBottomDivConstruction">Building Materials</p>
+                <p class="hoverBottomDiv"><?php echo $titan->getOption( 'feat4_title2_text' ); ?></p>
+                <p class="hoverBottomDivConstruction"><?php echo $titan->getOption( 'feat4_sub_text' ); ?></p>
             </div>
         </div>
         </a>
         <a href="inner.html">
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 market">
-                    <div class="shadowDivMarket"></div>
+                    <div class="shadowDivMarket" style="<?php echo 'background-color: '.$titan->getOption( 'feat5_color' ).';' ?>"></div>
             <div class="marketUpperDiv">
-                <img src="resource/images/common/market.png">
+                <img src="<?php echo esc_url( $imageSrcfeat[5] ); ?>">
                 <div class="hoverDivMarket">
-                    <p><b>CAPITAL</b></p><p class="textMarket">MARKET</p>
+                    <p><b><?php echo $titan->getOption( 'feat5_title1_text' ); ?></b></p><p class="textMarket"><?php echo $titan->getOption( 'feat5_title2_text' ); ?></p>
                 </div>
-                <p class="hoverBottomDiv">Investment & capital market</p>
-                <p class="hoverBottomDivMarket">international trade & commerce</p>
+                <p class="hoverBottomDiv"><?php echo $titan->getOption( 'feat5_sub_text' ); ?></p>
             </div>
         </div>
         </a>
@@ -94,24 +93,24 @@ for($i=1;$i<=8;$i++){
 <div class="container-fluid">
     <div class="row">
         <a href="inner.html">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 powerGeneration">
-                <div class="shadowDivPower"></div>
+            <div class="col-md-4 col-xs-12 powerGeneration">
+                <div class="shadowDivPower" style="<?php echo 'background-color: '.$titan->getOption( 'feat6_color' ).';' ?>"></div>
                 <div class="powerGenerationUpperDiv">
-                    <img src="resource/images/common/power.png">
+                    <img src="<?php echo esc_url( $imageSrcfeat[6] ); ?>">
                     <div class="hoverDivpowerGeneration">
-                        <p><b>POWER GENERATION</b></p>
+                        <p><b><?php echo $titan->getOption( 'feat6_title1_text' ); ?></b></p>
                     </div>
-                    <p class="hoverBottomDiv">Doreen Power House Ltd.</p>
+                    <p class="hoverBottomDiv"><?php echo $titan->getOption( 'feat6_sub_text' ); ?></p>
                 </div>
             </div>
         </a>
         <a href="inner.html">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 internationalTrade">
-                <div class="shadowDivTrade"></div>
+                <div class="shadowDivTrade" style="<?php echo 'background-color: '.$titan->getOption( 'feat7_color' ).';' ?>"></div>
                 <div class="internationalTradeUpperDiv">
-                    <img src="resource/images/common/int_trade_commerce-th.png">
+                    <img src="<?php echo esc_url( $imageSrcfeat[7] ); ?>">
                     <div class="hoverDivinternationalTrade">
-                        <p><b>INTERNATIONAL</b></p> <p>TRADE & COMMERCE</p>
+                        <p><b><?php echo $titan->getOption( 'feat7_title1_text' ); ?></b></p> <p><?php echo $titan->getOption( 'feat7_title2_text' ); ?></p>
                     </div>
                     <!--<p class="hoverBottomDiv">Investment & capital market</p>-->
                 </div>
@@ -119,58 +118,17 @@ for($i=1;$i<=8;$i++){
         </a>
         <a href="inner.html">
             <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 managementService">
-                <div class="shadowDivManagement"></div>
+                <div class="shadowDivManagement" style="<?php echo 'background-color: '.$titan->getOption( 'feat8_color' ).';' ?>"></div>
                 <div class="managementServiceUpperDiv">
-                    <img src="resource/images/common/management.png">
+                    <img src="<?php echo esc_url( $imageSrcfeat[8] ); ?>">
                     <div class="hoverDivmanagementService">
-                      <p>MANAGEMENT</p><p>SERVICES</p>
+                      <p><?php echo $titan->getOption( 'feat8_title1_text' ); ?></p>
                     </div>
                 </div>
             </div>
         </a>
     </div>
 </div>
-<div class="container-fluid">
-    <div class="row">
-        <a href="inner.html">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 powerGeneration">
-                <div class="shadowDivPower"></div>
-                <div class="powerGenerationUpperDiv">
-                    <img src="resource/images/common/power.png">
-
-                    <div class="hoverDivpowerGeneration">
-                        <p><b>POWER GENERATION</b></p>
-                    </div>
-                    <p class="hoverBottomDiv">Doreen Power House Ltd.</p>
-                </div>
-            </div>
-        </a>
-        <a href="inner.html">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 internationalTrade">
-                <div class="shadowDivTrade"></div>
-                <div class="internationalTradeUpperDiv">
-                    <img src="resource/images/common/int_trade_commerce-th.png">
-                    <div class="hoverDivinternationalTrade">
-                        <p><b>INTERNATIONAL</b></p> <p>TRADE & COMMERCE</p>
-                    </div>
-                    <!--<p class="hoverBottomDiv">Investment & capital market</p>-->
-                </div>
-            </div>
-        </a>
-        <a href="inner.html">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 managementService">
-                <div class="shadowDivManagement"></div>
-                <div class="managementServiceUpperDiv">
-                    <img src="resource/images/common/management.png">
-                    <div class="hoverDivmanagementService">
-                      <p>MANAGEMENT</p><p>SERVICES</p>
-                    </div>
-                </div>
-            </div>
-        </a>
-    </div>
-</div>
-
 
 <div class="container-fluid">
     <div class="row">
