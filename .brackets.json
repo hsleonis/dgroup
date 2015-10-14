@@ -1,0 +1,7 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/opt/lampp/htdocs/dg/wp-content/themes/doreen/admin/Settings/admin/js/serialize.js",
+        "opt/lampp/htdocs/dg/wp-content/themes/doreen/admin/Settings/admin/js/ace-min-noconflict/behaviour",
+        "/opt/lampp/htdocs/dg/wp-content/themes/doreen/admin/Settings/admin/js/wp-color-picker-alpha.js"
+    ]
+}

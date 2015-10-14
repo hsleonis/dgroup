@@ -1,0 +1,78 @@
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../fonts/fontawesome-webfont.eot?v=4.0.3');
+  src: url('../fonts/fontawesome-webfont.eot?#iefix&v=4.0.3') format('embedded-opentype'), url('../fonts/fontawesome-webfont.woff?v=4.0.3') format('woff'), url('../fonts/fontawesome-webfont.ttf?v=4.0.3') format('truetype'), url('../fonts/fontawesome-webfont.svg?v=4.0.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.plax.ccparallax-one {
+  background-image: url("../images/parallex/paralax.png");
+}
+
+
+
+
+.plax:last-child {
+  margin-bottom: 0;
+}
+.plax.ccparallax {
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-bottom: 50px;
+    padding-top: 50px;
+    height: 400px;
+}
+.plax.content {
+    background: none repeat scroll 0 0 #2581e8;
+    /*padding: 42px 0;*/
+    
+}
+.parallexHeading{
+    font-family: 'Raleway', sans-serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+
+.parallexContent{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10%;
+}
+
+.parallexDescription{
+    font-family: 'Raleway', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+
+
+.plax .headlines h2 {
+    color: #fff;
+    font-family: "PT Sans",sans-serif;
+    font-size: 32px;
+    margin: 0;
+	text-align: center;
+}
+.plax .headlines p {
+    font-size: 16px;
+    font-weight: 300;
+    margin: 0;
+	color:#f6f3f3;
+	text-align: center;
+}
+.plax .contentarea, .plax .contentarea h2{
+	color:#FFF;	
+}
