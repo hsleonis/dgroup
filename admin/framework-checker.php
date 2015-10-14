@@ -37,7 +37,7 @@ if ( ! class_exists( 'TitanFrameworkChecker' ) ) {
 	class TitanFrameworkChecker {
 
 
-		const SEARCH_REGEX = '/titan-framework.php/i';
+		const SEARCH_REGEX = 'titan-framework.php/i';
 		const TITAN_CLASS = 'TitanFramework';
 		const PLUGIN_SLUG = 'titan-framework';
 

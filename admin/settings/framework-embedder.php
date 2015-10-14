@@ -56,7 +56,7 @@ if ( ! class_exists( 'TitanFrameworkEmbedder' ) ) {
 			if ( class_exists( 'TitanFramework' ) ) {
 				return;
 			}
-			require_once( 'titan-framework.php' );
+			require_once( 'framework.php' );
 		}
 	}
 

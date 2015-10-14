@@ -9,4 +9,7 @@ require('theme/enqueue.php');
 require('theme/menu.php');
 require('theme/sidebar.php');
 require('theme/support.php');
-require( 'settings/titan-framework-embedder.php');
+require_once('framework-checker.php');
+if(class_exists("TitanFramework")){
+    require_once('options.php');
+}
