@@ -9,3 +9,4 @@ require('theme/enqueue.php');
 require('theme/menu.php');
 require('theme/sidebar.php');
 require('theme/support.php');
+require( 'settings/titan-framework-embedder.php');

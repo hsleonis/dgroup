@@ -4,7 +4,8 @@ Template name: Home template
 */
 
 get_header();
-do_shortcode('[ultra_camera_slider]');
+
+echo do_shortcode('[masterslider id="2"]');
 
 ?>
 <div class="container-fluid">
