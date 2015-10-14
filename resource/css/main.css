@@ -2126,7 +2126,8 @@ form input[type="submit"] {
                         .shadowDivTextile{
     width: 100%;
     height: 450px;
-    background-color: rgba(0,105,92,0.6);
+    background-color: #EEE;
+    opacity: 0.6;
     position: absolute;
     z-index: 100;
 
@@ -2136,7 +2137,8 @@ form input[type="submit"] {
                         .shadowDivHoldings{
                             width: 100%;
                             height: 450px;
-                            background-color: rgba(0,0,0,0.7);
+                            background-color: #EEE;
+                            opacity: 0.6;
                             position: absolute;
                             z-index: 100;
 
@@ -2145,7 +2147,8 @@ form input[type="submit"] {
                         .shadowDivHotel{
                             width: 100%;
                             height: 450px;
-                            background-color: rgba(134,2,119,0.5);
+                            background-color: #EEE;
+                            opacity: 0.6;
                             position: absolute;
                             z-index: 100;
 
@@ -2154,7 +2157,8 @@ form input[type="submit"] {
                         .shadowDivConstruction{
                             width: 100%;
                             height: 450px;
-                            background-color: rgba(0,1,2,0.5);
+                            background-color: #EEE;
+                            opacity: 0.6;
                             position: absolute;
                             z-index: 100;
 
@@ -2163,7 +2167,8 @@ form input[type="submit"] {
                         .shadowDivMarket{
                             width: 100%;
                             height: 450px;
-                            background-color: rgba(122,168,1,0.8);
+                            background-color: #EEE;
+                            opacity: 0.6;
                             position: absolute;
                             z-index: 100;
 
@@ -2171,7 +2176,8 @@ form input[type="submit"] {
                         .shadowDivPower{
                             width: 100%;
                             height: 300px;
-                            background-color: rgba(0,191,165,0.6);
+                            background-color: #EEE;
+                            opacity: 0.6;
                             position: absolute;
                             z-index: 100;
 
@@ -2179,7 +2185,8 @@ form input[type="submit"] {
                         .shadowDivTrade{
                             width: 100%;
                             height: 300px;
-                            background-color: rgba(2,80,158,0.5);
+                            background-color: #EEE;
+                            opacity: 0.6;
                             position: absolute;
                             z-index: 100;
 
@@ -2189,7 +2196,8 @@ form input[type="submit"] {
                         .shadowDivManagement{
                             width: 100%;
                             height: 300px;
-                            background-color: rgba(96,125,139,0.6);
+                            background-color: #EEE;
+                            opacity: 0.6;
                             position: absolute;
                             z-index: 100;
 

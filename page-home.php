@@ -5,31 +5,42 @@ Template name: Home template
 
 get_header();
 
-echo do_shortcode('[masterslider id="4"]');
+$titan = TitanFramework::getInstance('wp_dg');
+$imageSrcfeat = array();
+for($i=1;$i<=8;$i++){
+    $imageID = $titan->getOption( 'feat'.$i.'_img' );
+    $imageSrcfeat[$i] = $imageID;
+    if ( is_numeric( $imageID ) ) {
+        $imageAttachment = wp_get_attachment_image_src( $imageID );
+        $imageSrcfeat[$i] = $imageAttachment[0];
+    }
+}
+//echo do_shortcode('[masterslider id="4"]');
 
 ?>
 
 <div class="container-fluid">
    <div class="row">
       <a href="#"><div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 textile">
-          <div class="shadowDivTextile"></div>
+          <div class="shadowDivTextile" style="<?php echo 'background-color: '.$titan->getOption( 'feat1_color' ).';' ?>"></div>
           <div class="textileUpperDiv">
-              <img src="resource/images/common/textile.png">
+              <img src="<?php echo esc_url( $imageSrcfeat[1] ); ?>">
               <div class="hoverDivTextile">
-                  <p>Textile</p>
+                  <p><?php echo $titan->getOption( 'feat1_title1_text' ); ?></p>
               </div>
-              <p class="hoverBottomDiv">Doreen rmg & textile</p>
+              <p class="hoverBottomDiv"><?php echo $titan->getOption( 'feat1_sub_text' ); ?></p>
           </div>
       </div>
       </a>
        <a href="#"><div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 holdings">
-           <div class="shadowDivHoldings"></div>
+           <div class="shadowDivHoldings" style="<?php echo 'background-color: '.$titan->getOption( 'feat2_color' ).';' ?>"></div>
            <div class="holdingsUpperDiv">
-               <img src="resource/images/common/holdings.png">
+               <img src="<?php echo esc_url( $imageSrcfeat[2] ); ?>">
                <div class="hoverDivHoldings">
-                   <p>DEVELOPMENTS &</p><p><b>HOLDINGS</b></p>
+                   <p><?php echo $titan->getOption( 'feat2_title2_text' ); ?></p>
+                   <p><b><?php echo $titan->getOption( 'feat2_title1_text' ); ?></b></p>
                </div>
-               <p class="hoverBottomDiv">Doreen developments & holdings</p>
+               <p class="hoverBottomDiv"><?php echo $titan->getOption( 'feat2_sub_text' ); ?></p>
            </div>
        </div>
        </a>
@@ -39,13 +50,13 @@ echo do_shortcode('[masterslider id="4"]');
     <div class="row">
         <a href="inner.html">
         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 hotel">
-            <div class="shadowDivHotel"></div>
+            <div class="shadowDivHotel" style="<?php echo 'background-color: '.$titan->getOption( 'feat3_color' ).';' ?>"></div>
             <div class="hotelUpperDiv">
-                <img src="resource/images/common/hotel.png">
+                <img src="<?php echo esc_url( $imageSrcfeat[3] ); ?>">
                 <div class="hoverDivHotel">
-                    <p class="hotelsBorder"><b>HOTELS</b></p><p>& RESORTS</p>
+                    <p class="hotelsBorder"><b><?php echo $titan->getOption( 'feat3_title1_text' ); ?></b></p><p><?php echo $titan->getOption( 'feat3_title2_text' ); ?></p>
                 </div>
-                <div class="hoverBottomDiv">four points by sheraton</div>
+                <div class="hoverBottomDiv"><?php echo $titan->getOption( 'feat3_sub_text' ); ?></div>
             </div>
         </div>
         </a>
