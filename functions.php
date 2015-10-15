@@ -6,3 +6,9 @@
 */
 
 require('admin/include.php');
+
+function ucsmart($text)
+{
+   return preg_replace('/([^a-z\']|^)([a-z])/e', '"$1".strtoupper("<b>$2</b>")',
+                       strtolower($text));
+}

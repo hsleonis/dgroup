@@ -1,5 +1,6 @@
 <?php
-
+if(class_exists('TitanFramework')){
+    
 $titan = TitanFramework::getInstance('wp_dg');
 
 /**
@@ -13,40 +14,8 @@ $homeTab = $adminPanel->createTab( array(
     'name' => __( 'Home', 'default' ),
 ) );
 
-// Featured (Large)
-$homeTab->createOption( array(
-    'name' => 'Featured (Large)',
-    'type' => 'heading',
-));
-$homeTab->createOption( array(
-    'name' => __( 'Overlay Color', 'default' ),
-    'id' => 'feat1_color',
-    'type' => 'color',
-    'desc' => __( 'Featured item overlay color', 'default' ),
-    'default' => '#26292C'
-) );
-$homeTab->createOption( array(
-    'name' => 'Background Image',
-    'id' => 'feat1_img',
-    'type' => 'upload',
-    'desc' => 'Upload image',
-    'size' => 'full',
-) );
-$homeTab->createOption( array(
-    'name' => __( 'Header Text', 'default' ),
-    'id' => 'feat1_title1_text',
-    'type' => 'text',
-    'desc' => __( 'Enter heading text', 'default' ),
-) );
-$homeTab->createOption( array(
-    'name' => __( 'Subheader Text', 'default' ),
-    'id' => 'feat1_sub_text',
-    'type' => 'text',
-    'desc' => __( 'Enter subheading text', 'default' ),
-) );
-
-// Featured 2~8
-for($i=2;$i<=8;$i++){
+// Featured
+for($i=1;$i<=8;$i++){
     
     $homeTab->createOption( array(
         'name' => 'Featured Item '.$i,
@@ -84,8 +53,107 @@ for($i=2;$i<=8;$i++){
         'type' => 'text',
         'desc' => __( 'Enter subheading text', 'default' ),
     ) );
+    $homeTab->createOption( array(
+        'name' => __( 'Item Link', 'default' ),
+        'id' => 'feat'.$i.'_link',
+        'type' => 'text',
+        'desc' => __( 'Item hyperlink with http://', 'default' ),
+    ) );
 }
+
+// Quote
+$homeTab->createOption( array(
+    'name' => 'Quote',
+    'type' => 'heading',
+));
+$homeTab->createOption( array(
+    'name' => __( 'Text', 'default' ),
+    'id' => 'quote_text',
+    'type' => 'text',
+    'desc' => __( 'Enter quotation', 'default' ),
+) );
+
+// Parallax
+$homeTab->createOption( array(
+    'name' => 'Parallax Section',
+    'type' => 'heading',
+));
+$homeTab->createOption( array(
+    'name' => __( 'Header Text', 'default' ),
+    'id' => 'par_title_text',
+    'type' => 'text',
+    'desc' => __( 'Enter heading text', 'default' ),
+) );
+$homeTab->createOption( array(
+    'name' => __( 'Subheader Text', 'default' ),
+    'id' => 'par_sub_text',
+    'type' => 'text',
+    'desc' => __( 'Enter subheading text', 'default' ),
+) );
+$homeTab->createOption( array(
+    'name' => 'Background Image',
+    'id' => 'par_img',
+    'type' => 'upload',
+    'desc' => 'Upload image',
+) );
+    
+// Posts
+$homeTab->createOption( array(
+    'name' => 'Posts',
+    'type' => 'heading',
+));
+$homeTab->createOption( array(
+    'name' => __( 'Header Text', 'default' ),
+    'id' => 'post_title_text',
+    'type' => 'text',
+    'desc' => __( 'Enter heading text', 'default' ),
+) );
+$homeTab->createOption( array(
+    'name' => __( 'Subheader Text', 'default' ),
+    'id' => 'post_sub_text',
+    'type' => 'text',
+    'desc' => __( 'Enter subheading text', 'default' ),
+) );
+$homeTab->createOption( array(
+    'name' => 'Posts',
+    'id' => 'post_count',
+    'type' => 'number',
+    'desc' => 'Enter number of posts to show',
+    'default' => '4',
+    'max' => '12',
+) );
 
 $homeTab->createOption( array(
     'type' => 'save',
 ) );
+
+/* General settings */
+$generalTab = $adminPanel->createTab( array(
+    'name' => __( 'General', 'default' ),
+) );
+$generalTab->createOption( array(
+    'name' => 'Header',
+    'type' => 'heading',
+));
+$generalTab->createOption( array(
+    'name' => __( 'Career Link', 'default' ),
+    'id' => 'career_link',
+    'type' => 'text',
+    'desc' => __( 'Enter career button link', 'default' ),
+) );
+$generalTab->createOption( array(
+    'name' => 'Footer',
+    'type' => 'heading',
+));
+$generalTab->createOption( array(
+    'name' => __( 'Copyright Info', 'default' ),
+    'id' => 'copy_info',
+    'type' => 'text',
+    'desc' => __( 'Enter copyright information', 'default' ),
+) );
+
+$generalTab->createOption( array(
+    'type' => 'save',
+) );
+    
+}
