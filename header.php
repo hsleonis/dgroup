@@ -4,26 +4,33 @@
  License: GPL v3
  Author: MD. Hasan Shahriar
 */
+
+$titan = TitanFramework::getInstance('wp_dg');
 ?>
+
 <!DOCTYPE html>
 <html lang="<?php bloginfo( 'language' ); ?>">
 <head>
     <meta charset="<?php bloginfo( 'charset' ); ?>"> 
     <?php wp_head(); ?>
 </head>
+    
 <body <?php body_class(); ?>>
+    
 <div class="container-fluid topHeader">
     <div class="row">
 
+
 <div class="col-xs-9 col-sm-9 col-md-8 col-lg-8"></div>
-<div class="col-xs-10 col-sm-10 col-md-4 col-lg-4 topDiv">
-    <span class="career"><a href="#">Career</a></span>
+        <div class="col-xs-10 col-sm-10 col-md-4 col-lg-4 topDiv">
+    <span class="career"><a href="<?php echo $titan->getOption( 'career_link' ); ?>">Career</a></span>
 
     <a href="#"><span class="downloads"></span></a><a href="#"><span class="downloadsText">Downloads</span></a>
 
     <a href="#"><span class="search"></span></a><a href="#"><span class="searchText">Search</span></a>
 </div>
-    </div>
+</div>
+
 </div>
 
 

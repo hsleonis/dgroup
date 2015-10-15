@@ -138,8 +138,14 @@ $generalTab->createOption( array(
 $generalTab->createOption( array(
     'name' => __( 'Career Link', 'default' ),
     'id' => 'career_link',
-    'type' => 'text',
+    'type' => 'select-pages',
     'desc' => __( 'Enter career button link', 'default' ),
+) );
+$generalTab->createOption( array(
+    'name' => __( 'Download Link', 'default' ),
+    'id' => 'download_link',
+    'type' => 'select-pages',
+    'desc' => __( 'Enter download button link', 'default' ),
 ) );
 $generalTab->createOption( array(
     'name' => 'Footer',

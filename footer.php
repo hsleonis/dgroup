@@ -8,7 +8,7 @@
   <!-------- Footer Menu ---------->
 
 
-
+<?php if(1) : ?>
 <div class="container footerMenu">
     <div class="row">
 
@@ -46,12 +46,11 @@
         </div>
     </div>
 </div>
+<?php endif; ?>
 
 </div>
 
-                                <!------- Copy Right ------->
-
-
+<!------- Copy Right ------->
 <div class="container-fluid copyRightContainer">
    <div class="row">
        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
