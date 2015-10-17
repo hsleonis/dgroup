@@ -138,14 +138,14 @@ $generalTab->createOption( array(
 $generalTab->createOption( array(
     'name' => __( 'Career Link', 'default' ),
     'id' => 'career_link',
-    'type' => 'select-pages',
-    'desc' => __( 'Enter career button link', 'default' ),
+    'type' => 'text',
+    'desc' => __( 'Enter career button link with http://', 'default' ),
 ) );
 $generalTab->createOption( array(
     'name' => __( 'Download Link', 'default' ),
     'id' => 'download_link',
-    'type' => 'select-pages',
-    'desc' => __( 'Enter download button link', 'default' ),
+    'type' => 'text',
+    'desc' => __( 'Enter download button link with http://', 'default' ),
 ) );
 $generalTab->createOption( array(
     'name' => 'Footer',
@@ -154,7 +154,7 @@ $generalTab->createOption( array(
 $generalTab->createOption( array(
     'name' => __( 'Copyright Info', 'default' ),
     'id' => 'copy_info',
-    'type' => 'text',
+    'type' => 'editor',
     'desc' => __( 'Enter copyright information', 'default' ),
 ) );
 

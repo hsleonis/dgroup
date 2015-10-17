@@ -36,6 +36,9 @@ function dg_scripts() {
 
 	wp_register_script( 'bootstrap-js',get_stylesheet_directory_uri().'/resource/js/bootstrap.min.js', array( 'jquery' ),'3.3.5', true );
 	wp_enqueue_script( 'bootstrap-js' );
+    
+    wp_register_script( 'jquery-easing',get_stylesheet_directory_uri().'/resource/js/jquery.easing.js', array( 'jquery' ),'1.3', true );
+	wp_enqueue_script( 'jquery-easing' );
 
 	wp_register_script( 'camera', get_stylesheet_directory_uri().'/resource/js/camera.min.js', array( 'jquery' ), '1.0', true );
 	wp_enqueue_script( 'camera' );

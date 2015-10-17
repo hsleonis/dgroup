@@ -25,7 +25,7 @@ $titan = TitanFramework::getInstance('wp_dg');
         <div class="col-xs-10 col-sm-10 col-md-4 col-lg-4 topDiv">
     <span class="career"><a href="<?php echo $titan->getOption( 'career_link' ); ?>">Career</a></span>
 
-    <a href="#"><span class="downloads"></span></a><a href="#"><span class="downloadsText">Downloads</span></a>
+    <a href="<?php echo $titan->getOption( 'download_link' ); ?>"><span class="downloads"></span><span class="downloadsText">Downloads</span></a>
 
     <a href="#"><span class="search"></span></a><a href="#"><span class="searchText">Search</span></a>
 </div>

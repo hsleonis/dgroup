@@ -1,4 +1,4 @@
-jQuery(function ($) {
+jQuery(document).ready(function ($) {
 
     $('#camera_wrap_2').camera({
         height: '500px',

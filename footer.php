@@ -4,6 +4,9 @@
  License: GPL v3
  Author: MD. Hasan Shahriar
 */
+
+$titan = TitanFramework::getInstance('wp_dg');
+
 ?>
   <!-------- Footer Menu ---------->
 
@@ -53,8 +56,8 @@
 <!------- Copy Right ------->
 <div class="container-fluid copyRightContainer">
    <div class="row">
-       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-           <p class="copyRight">&copy; 2015 Doreen Group Ltd. All rights reserved. <span class="designDeveloped"><a href="#">Design & developed by Dcastalia.</a></span></p>
+       <div class="copyRight">
+            <?php echo $titan->getOption( 'copy_info' ); ?>
        </div>
    </div>
 </div>

@@ -1,6 +1,4 @@
-
-
-                        /* ---------  CSS Reset ----------*/
+/* ---------  CSS Reset ----------*/
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -60,9 +58,9 @@ a{
                         /*----- Top Header ------*/
 
 
-                        .topDiv{
-                            float: right;
-                        }
+.topDiv{
+    float: right;
+}
 
 .career{
     border-right: 1px solid rgba(255,255,255,0.2);
@@ -831,6 +829,7 @@ letter-spacing: 2px;
     background-color: #42545B;
     min-height: 400px;
     padding-top: 35px;
+    margin-top: 50px;
 }
 
 .footerMenu ul{
@@ -994,10 +993,10 @@ form input[type="submit"] {
     padding-top:10px;
 }
 
-.copyRight p,.copyRight a{
+.copyRight p,
+.copyRight a{
     font-size: 13px;
     color:#fff;
-
 }
 
 .designDeveloped a{
@@ -1193,6 +1192,7 @@ form input[type="submit"] {
 
                         .test{
                             height: 300px;
+                            /*float: left;*/
                             overflow: hidden;
                             position: relative;
 
@@ -2121,13 +2121,14 @@ form input[type="submit"] {
 
 
                         .shadowDivTextile{
-    width: 100%;
-    height: 450px;
-    background-color: #EEE;
-    position: absolute;
-    z-index: 100;
-    opacity: 0.85;
-}
+                            width: 100%;
+                            height: 450px;
+                            background-color: #EEE;
+                            opacity: 0.85;
+                            position: absolute;
+                            z-index: 100;
+
+                        }
 
 
                         .shadowDivHoldings{
@@ -2173,7 +2174,7 @@ form input[type="submit"] {
                             width: 100%;
                             height: 300px;
                             background-color: #EEE;
-			                opacity: 0.7;
+                            opacity: 0.7;
                             position: absolute;
                             z-index: 100;
 
@@ -2182,7 +2183,7 @@ form input[type="submit"] {
                             width: 100%;
                             height: 300px;
                             background-color: #EEE;
-			                opacity: 0.7;
+                            opacity: 0.7;
                             position: absolute;
                             z-index: 100;
 
@@ -2193,17 +2194,13 @@ form input[type="submit"] {
                             width: 100%;
                             height: 300px;
                             background-color: #EEE;
-			                opacity: 0.7;
+                            opacity: 0.7;
                             position: absolute;
                             z-index: 100;
 
                         }
 
-.mobilemenu_container{
-    float: left;
-    width: 100%;
-    margin-top: -13%;
-}
+
 
 
 /*********************************************************************************
@@ -2221,14 +2218,8 @@ form input[type="submit"] {
 6. PHOTO GALLERY
 7. CONTACT US AREA
 8. CONTACT FORM
-
 Y. COMMON AREA
 Z. RESPONSIVE AREA
-
-#Page
-1. MANAGEMENT
-2. VIDEO AREA
-3. MAP AND ADDRESS
 
 ==========================================================================*/
 
@@ -2303,7 +2294,6 @@ h2{
 h3{
     font-size: 24px;
     font-weight: 400;
-    letter-spacing: 3px;
 }
 h4{}
 h5{}
@@ -2318,14 +2308,6 @@ h6{}
     height: 300px;
     overflow: hidden;
 }
-
-.banner{
-    background: url(../images/Untitled-2.png) repeat-x;
-    width: 100%;
-    height: 310px;
-}
-
-
 
 .banner-img{
     float: left;
@@ -2443,23 +2425,6 @@ h6{}
 =============================*/
 .view-wrapper{
     height: auto;
-    padding: 40px 45px 45px;
-    background: #E1DDDB;
-    line-height: 20px;
-    text-align: justify;
-}
-
-.view-wrapper h3{
-    text-align: center;
-    margin: 0 0 25px;
-}
-
-.view-border{
-    width: 100%;
-    margin: 0 auto 30px;
-    height: 1px;
-    opacity: 0.2;
-    background: #3d3d3d;
 }
 
 .over-view{
@@ -2507,44 +2472,11 @@ h6{}
     color: #000;
     text-transform: uppercase;
     margin-bottom: 40px;
-    letter-spacing: 3px;
-    font-weight: 400;
 }
 
 .four-sheraton img{
     margin-bottom: 50px;
 }
-
-.crm-msg{position: relative}
-
-.crm-msg img{
-    float: left;
-}
-
-.text-wrp{
-    float: right;
-    padding: 0 !important;
-    text-align: right;
-    background: transparent !important;
-    height: 65px !important;
-    position: absolute;
-    top: 140px;
-}
-.text-wrp h4{
-    font-size: 15px;
-    font-weight: 500;
-}
-
-.text-wrp span{
-    display: block
-}
-
-.spn-text{
-    text-align: right;
-    font-size: 14px;
-    color: justify;
-}
-
 
 /*====================================
 =========Simple Text bar Area=========
@@ -2721,7 +2653,7 @@ h6{}
 
 .contact-address small{margin-top: 25px;display: block}
 
-.contact-address address{}
+.contact-address address{padding-bottom: }
 
 .contact-address .news-header{
     margin-bottom: 80px;
@@ -2793,7 +2725,7 @@ h6{}
     margin-bottom: 15px;
 }
 /*==============================
-=========COMMON AREA===========
+=======COMMON AREA AREA=========
 =============================*/
 .b-color{
     color: #000;
@@ -2808,102 +2740,6 @@ h6{}
 }
 
 .btn-center{text-align: center;margin-top: 25px;}
-
-.posn{
-    position: absolute;
-    right: 70px;
-    top: 250px;
-}
-
-.news-bg-color{background: #E1DDDB}
-
-/*=============================
-========== MANAGEMENT =========
-=============================*/
-.managementarea{
-    padding: 35px 70px;
-    width: 100%;
-    background: #B9B9B9;
-    float: left;
-}
-
-.managementarea h3{
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-
-.managementarea div{
-    height: auto;
-    position: relative;
-    padding:0 25px 35px;
-    color: #fff;
-}
-
-.managementarea span{
-    text-align: right;
-}
-
-.managementarea img{
-    margin: 20px 0 20px 0px;
-}
-
-
-/*.managementarea div:nth-child(3n+0){background-color:#71BC41;}
-.managementarea div:nth-child(3n+1){background-color:#3F3F3F;}
-.managementarea div:nth-child(3n+2){background-color:#fff; color: #000}*/
-
-.managementarea div:nth-child(3n+0){background-color:#71BC41;}
-.managementarea div:nth-child(3n+1){background-color:#3F3F3F;}
-.managementarea div:nth-child(3n+2){background-color:#fff; color: #000}
-
-.managementarea div:nth-child(3n+0) .text-wrp{color:#fff;}
-.managementarea div:nth-child(3n+1) .text-wrp{color:#fff;}
-
-
-/*text-wrp*/
-
-/*=============================
-========== VIDEO AREA =========
-=============================*/
-.videorow{
-    width: 100%;
-    float: left;
-    height: 300px;
-    position: relative;
-    background: url(../images/cfghjfxc.png);
-}
-
-.video-btn{
-    width:330px;
-    margin: auto;
-    position: absolute;
-    text-align: center;
-    top:90px;
-    left: 38%;
-}
-
-.video-btn h3{
-    font-weight: 700;
-    margin: 15px 0 10px;
-}
- 
-/*=============================
-=======MAP AND ADDRESS=========
-=============================*/
-.map-wrapper{
-    float: left;
-    width: 100%;
-}
-
-.form-wrapper{
-    margin: 0 auto;
-    width: 70%;
-}
-
-
-
-
 /*=============================
 =======RESPONSIVE AREA=========
 =============================*/
@@ -2938,27 +2774,6 @@ h6{}
     .pg > img{width: 100%}
 }
 
-@media (min-width: 992px) and (max-width: 1295px) {
-    .managementarea{
-        text-align: center;
-    }
-    
-    .managementarea div img{
-        margin: 0 auto;
-        
-    }
-    
-    .text-wrp{
-        float: none;
-        top: 0;
-        margin: 0 auto;
-    }
-    
-    .managementarea h4,.managementarea span{text-align: center !important}
-    
-    .spn-text{text-align: center}
-}
-
 @media screen and (max-width: 960px){
     .menu-div{width:75%}
     
@@ -2990,9 +2805,6 @@ h6{}
 
 @media screen and (max-width: 735px){
     .menu-div{width:85%}
-    
-    
-    
     
 }
 
@@ -3027,27 +2839,6 @@ h6{}
 
 @media screen and (max-width: 515px){
     .number-box h3,.news-text h3{font-size: 16px !important;}
-}
-
-@media screen and (max-width: 530px){
-    .managementarea{
-        text-align: center;
-    }
-    
-    .managementarea div img{
-        margin: 0 auto;
-        
-    }
-    
-    .text-wrp{
-        float: none;
-        top: 0;
-        margin: 0 auto;
-    }
-    
-    .managementarea h4,.managementarea span{text-align: center !important}
-    
-    .spn-text{text-align: center}
 }
 
 @media screen and (max-width: 490px){
