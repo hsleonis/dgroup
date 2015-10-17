@@ -32,7 +32,7 @@ function enterprise() {
 		'description'         => __( 'Enterprise Description', 'dcastalia' ),
 		'labels'              => $labels,
 		'supports'            => array( 'title', 'editor', 'thumbnail', ),
-		'taxonomies'          => array( 'category', 'tags' ),
+		'taxonomies'          => array( 'category', 'tag' ),
 		'hierarchical'        => true,
 		'public'              => true,
 		'show_ui'             => true,

@@ -1,6 +1,6 @@
 <?php
 /*
- Meta ox
+ Meta box
  License: GPL v3
  Author: MD. Hasan Shahriar
 */
@@ -47,17 +47,6 @@ $contactBox->createOption( array(
     'name' => __('Contact Information', 'dcastalia' ),
     'id' => 'post_extra_contact',
     'type' => 'editor'
-));
-
-// Gallery
-$galleryBox = $titan->createMetaBox( array(
-    'name' => __('Gallery', 'dcastalia' ),
-    'post_type' => array('enterprise'),
-) );
-$galleryBox->createOption( array(
-    'name' => 'Enterprise Images',
-    'id' => 'post_extra_gallery',
-    'type' => 'gallery',
 ));
 
 }
