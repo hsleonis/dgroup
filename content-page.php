@@ -35,7 +35,7 @@ $titan = TitanFramework::getInstance('wp_dg');
     <div class="row">
         <div class="four-sheraton crm-msg">
             <h3><?php the_title(); ?></h3>
-            <div><?php echo get_the_content(); ?></div>
+            <div><?php the_content(); ?></div>
         </div>
     </div>
     </div>

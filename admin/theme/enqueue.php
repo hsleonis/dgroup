@@ -25,6 +25,9 @@ function dg_scripts() {
     
     wp_register_style( 'raleway-font', 'https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700', array( 'bootstrap' ));
 	wp_enqueue_style( 'raleway-font' );
+    
+    wp_register_style( 'lightgallery-css', get_stylesheet_directory_uri().'/resource/dist/css/lightgallery.css', array( 'bootstrap' ), '1.1');
+	wp_enqueue_style( 'lightgallery-css' );
 
 	wp_register_style( 'style', get_stylesheet_uri(), array( 'bootstrap', ' dgmain' ), '1.1');
 	wp_enqueue_style( 'style' );
@@ -42,6 +45,12 @@ function dg_scripts() {
 
 	wp_register_script( 'camera', get_stylesheet_directory_uri().'/resource/js/camera.min.js', array( 'jquery' ), '1.0', true );
 	wp_enqueue_script( 'camera' );
+    
+    wp_register_script( 'ba-bbq', get_stylesheet_directory_uri().'/resource/js/jquery.ba-bbq.js', array( 'jquery' ), '1.0', true );
+	wp_enqueue_script( 'ba-bbq' );
+    
+    wp_register_script( 'smooth-scroll', get_stylesheet_directory_uri().'/resource/js/jquery.smooth-scroll.min.js', array( 'jquery' ), '1.0', true );
+	wp_enqueue_script( 'smooth-scroll' );
 
 	wp_register_script( 'mobile-customized', get_stylesheet_directory_uri().'/resource/js/jquery.mobile.customized.min.js', array( 'jquery' ), '1.3', true );
 	wp_enqueue_script( 'mobile-customized' );
@@ -51,6 +60,15 @@ function dg_scripts() {
     
     wp_register_script( 'zoom-scroller', get_stylesheet_directory_uri().'/resource/js/jquery.zoom-scroller.js', array( 'jquery' ), '1.3', true );
 	wp_enqueue_script( 'zoom-scroller' );
+    
+    wp_register_script( 'zoom-scroller', get_stylesheet_directory_uri().'/resource/js/jquery.zoom-scroller.js', array( 'jquery' ), '1.3', true );
+	wp_enqueue_script( 'zoom-scroller' );
+    
+    wp_register_script( 'lightgallery', get_stylesheet_directory_uri().'/resource/dist/js/lightgallery-all.js', array( 'jquery' ), '1.3', true );
+	wp_enqueue_script( 'lightgallery' );
+    
+    wp_register_script( 'picturefill', get_stylesheet_directory_uri().'/resource/js/picturefill.min.js', array( 'jquery','lightgallery' ), '2.3.1', true );
+	wp_enqueue_script( 'picturefill' );
     
     wp_register_script( 'dgmain-js', get_stylesheet_directory_uri().'/resource/js/main.js', array( 'jquery','bootstrap-js' ), '1.3', true );
 	wp_enqueue_script( 'dgmain-js' );

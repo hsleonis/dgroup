@@ -32,6 +32,32 @@ jQuery(document).ready(function ($) {
     $(".holdingsUpperDiv").zoomScroller({
         animationTime: 500
     });
+    
+
+    $(document)
+    .on('click', 'a[href*="#"]', function() {
+      if ( this.hash && this.pathname === location.pathname ) {
+        $.bbq.pushState( '#/' + this.hash.slice(1) );
+        return false;
+      }
+    })
+    .ready(function() {
+      $(window).bind('hashchange', function(event) {
+        var tgt = location.hash.replace(/^#\/?/,'');
+        if ( document.getElementById(tgt) ) {
+          $.smoothScroll({scrollTarget: '#' + tgt});
+            console.log(tgt);
+        }
+      });
+
+      $(window).trigger('hashchange');
+    });
+
+/*========================================
+            Light Gallery
+========================================*/
+    $("#photo-gallery").lightGallery();
+
 
     resize_function();
 

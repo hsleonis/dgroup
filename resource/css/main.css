@@ -1325,15 +1325,9 @@ form input[type="submit"] {
 }
 
 .text-bar {
-    width: 620px;
-    margin: 0 auto;
-    min-height: 100px;
-    line-height: 100px;
     text-align: center;
-    height: auto;
-    display: inline;
     color: #71BC41;
-    letter-spacing: 4px;
+    margin: 40px 0;
 }
 
 .text-bar img {
@@ -1885,7 +1879,7 @@ form input[type="submit"] {
     width: 100%;
     height: 450px;
     background-color: #EEE;
-    opacity: 0.7;
+    opacity: 0.6;
     position: absolute;
     z-index: 100;
 }
@@ -1894,7 +1888,7 @@ form input[type="submit"] {
     width: 100%;
     height: 450px;
     background-color: #EEE;
-    opacity: 0.7;
+    opacity: 0.6;
     position: absolute;
     z-index: 100;
 }
@@ -1903,7 +1897,7 @@ form input[type="submit"] {
     width: 100%;
     height: 450px;
     background-color: #EEE;
-    opacity: 0.7;
+    opacity: 0.6;
     position: absolute;
     z-index: 100;
 }
@@ -1912,7 +1906,7 @@ form input[type="submit"] {
     width: 100%;
     height: 450px;
     background-color: #EEE;
-    opacity: 0.7;
+    opacity: 0.6;
     position: absolute;
     z-index: 100;
 }
@@ -1921,7 +1915,7 @@ form input[type="submit"] {
     width: 100%;
     height: 300px;
     background-color: #EEE;
-    opacity: 0.7;
+    opacity: 0.6;
     position: absolute;
     z-index: 100;
 }
@@ -1930,7 +1924,7 @@ form input[type="submit"] {
     width: 100%;
     height: 300px;
     background-color: #EEE;
-    opacity: 0.7;
+    opacity: 0.6;
     position: absolute;
     z-index: 100;
 }
@@ -1939,7 +1933,7 @@ form input[type="submit"] {
     width: 100%;
     height: 300px;
     background-color: #EEE;
-    opacity: 0.7;
+    opacity: 0.6;
     position: absolute;
     z-index: 100;
 }
@@ -2085,15 +2079,15 @@ h6 {}
 
 .center-btn {
     width: 355px;
-    height: 120px;
     margin: 0 auto;
+    padding: 20px;
     border: solid #fff 5px;
     text-align: center;
     color: #fff;
     text-transform: uppercase;
-    cursor: pointer;
-    top: 30%;
     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .center-btn:hover {
@@ -2103,11 +2097,9 @@ h6 {}
 }
 
 .center-btn h2 {
-    margin-top: 20px
 }
 
 .center-btn h3 {
-    margin-top: 10px
 }
 
 .selected-item {
@@ -2187,7 +2179,6 @@ h6 {}
 
 .view-wrapper {
     height: auto;
-    padding: 40px 45px 45px;
     background: #E1DDDB;
     line-height: 20px;
     text-align: justify;
@@ -2296,18 +2287,6 @@ h6 {}
 /*====================================
 =========Simple Text bar Area=========
 =====================================*/
-
-.text-bar {
-    width: 620px;
-    margin: 0 auto;
-    min-height: 100px;
-    line-height: 100px;
-    text-align: center;
-    height: auto;
-    display: inline;
-    color: #71BC41;
-    letter-spacing: 4px;
-}
 
 .text-bar img {
     margin: 0 20px;
