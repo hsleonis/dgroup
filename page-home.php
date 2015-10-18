@@ -11,100 +11,47 @@ for($i=1;$i<=8;$i++){
     $imageID = $titan->getOption( 'feat'.$i.'_img' );
     $imageSrcfeat[$i] = $imageID;
     if ( is_numeric( $imageID ) ) {
-        $imageAttachment = wp_get_attachment_image_src( $imageID );
+        $imageAttachment = wp_get_attachment_image_src( $imageID, 'full' );
         $imageSrcfeat[$i] = $imageAttachment[0];
     }
 }
 $imageID = $titan->getOption( 'par_img' );
 $imageSrcPar = $imageID;
 if ( is_numeric( $imageID ) ) {
-    $imageAttachment = wp_get_attachment_image_src( $imageID );
+    $imageAttachment = wp_get_attachment_image_src( $imageID, 'full' );
     $imageSrcPar = $imageAttachment[0];
 }
-
-    //echo do_shortcode("[ultra_camera_slider]");
+$imageSrcSlide = array();
+for($i=1;$i<=5;$i++){
+    $imageID = $titan->getOption( 'slide'.$i.'_img' );
+    $imageSrcSlide[$i] = $imageID;
+    if ( is_numeric( $imageID ) ) {
+        $imageAttachment = wp_get_attachment_image_src( $imageID, 'full' );
+        $imageSrcSlide[$i] = $imageAttachment[0];
+    }
+}
 
 ?>
 
 <!-----  Slider ------>
 <div class="fluid_container">
     <div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
-
-        <div data-thumb="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/thumbs/1_thumb.jpg" data-src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/1.jpg">
+        
+        <?php for($i=1;$i<=5;$i++) : ?>
+        <div data-thumb="<?php echo esc_url( $imageSrcSlide[$i] ); ?>" data-src="<?php echo esc_url( $imageSrcSlide[$i] ); ?>">
             <div class="camera_caption fadeIn">
 
-                <div class="captionHeaderDiv">Uniqueness</div>
+                <div class="captionHeaderDiv"><?php echo $titan->getOption( 'slide'.$i.'_caption' ); ?></div>
                 <div class="captionBody">
-                    <div class="captionHeading"><p><b>Honesty, Interety & Fairness</b></p>
-                        <p class="captionDescription">Doreen is a persuit of change nd up gradation.
-                            It is persuing new business opportunities in
-                            the dynamic economic spectrum of Bangladesh & the world.</p>
-                        <p class="captionFooter"> <a href="#">Our All Concerns</a></p>
+                    <div class="captionHeading"><p><b><?php echo $titan->getOption( 'slide'.$i.'_title' ); ?></b></p>
+                        <p class="captionDescription"><?php echo $titan->getOption( 'slide'.$i.'_desc' ); ?></p>
+                        <p class="captionFooter"> <a href="<?php echo $titan->getOption( 'slide'.$i.'_footer_link' ); ?>"><?php echo $titan->getOption( 'slide'.$i.'_footer' ); ?></a></p>
                     </div>
                 </div>
             </div>
 
         </div>
-
-
-        <div data-thumb="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/thumbs/6_thumb.jpg" data-src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/6.jpg">
-            <div class="camera_caption fadeIn">
-
-
-
-                <div class="captionHeaderDiv">Uniqueness</div>
-                <div class="captionBody">
-                    <div class="captionHeading"><p><b>Honesty, Interety & Fairness</b></p>
-
-                        <p class="captionDescription">Doreen is a persuit of change nd up gradation.
-                            It is persuing new business opportunities in
-                            the dynamic economic spectrum of Bangladesh & the world.</p>
-                        <p class="captionFooter"> <a href="#">Our All Concerns</a></p>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-        <div data-thumb="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/thumbs/3_thumb.jpg" data-src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/3.jpg">
-            <div class="camera_caption fadeIn">
-
-
-
-                <div class="captionHeaderDiv">Uniqueness</div>
-                <div class="captionBody">
-                    <div class="captionHeading"><p><b>Honesty, Interety & Fairness</b></p>
-
-                        <p class="captionDescription">Doreen is a persuit of change nd up gradation.
-                            It is persuing new business opportunities in
-                            the dynamic economic spectrum of Bangladesh & the world.</p>
-                        <p class="captionFooter"> <a href="#">Our All Concerns</a></p>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-        <div data-thumb="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/thumbs/5_thumb.jpg" data-src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/5.jpg">
-            <div class="camera_caption fadeIn">
-
-
-
-                <div class="captionHeaderDiv">Uniqueness</div>
-                <div class="captionBody">
-                    <div class="captionHeading"><p><b>Honesty, Interety & Fairness</b></p>
-
-                        <p class="captionDescription">Doreen is a persuit of change nd up gradation.
-                            It is persuing new business opportunities in
-                            the dynamic economic spectrum of Bangladesh & the world.</p>
-                        <p class="captionFooter"> <a href="#">Our All Concerns</a></p>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-
+        <?php endfor; ?>
     </div>
 
 </div>
@@ -267,7 +214,7 @@ if ( is_numeric( $imageID ) ) {
         $allposts = get_posts( $args );
         foreach ( $allposts as $post ) : setup_postdata( $post ); ?>
 
-        <div class="col-xs-6 col-md-3 missionThumbnail1">
+        <div class="col-xs-6 col-md-3 mission">
             <div class="test">
                 <a href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail(array(550,350)); ?>
