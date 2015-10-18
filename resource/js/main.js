@@ -35,7 +35,7 @@ jQuery(document).ready(function ($) {
     
 
     $(document)
-    .on('click', 'a[href*="#"]', function() {
+    .on('click', '.project-menu a[href*="#"]', function() {
       if ( this.hash && this.pathname === location.pathname ) {
         $.bbq.pushState( '#/' + this.hash.slice(1) );
         return false;

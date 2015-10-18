@@ -50,7 +50,7 @@ function dg_news() {
 
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name' => __( 'Date', 'dcastalia' ),
-		'id'   => 'date1',
+		'id'   => 'textdate',
 		'type' => 'text_date',
 	) );
 
