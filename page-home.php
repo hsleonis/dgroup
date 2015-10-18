@@ -27,21 +27,88 @@ if ( is_numeric( $imageID ) ) {
 ?>
 
 <!-----  Slider ------>
-
 <div class="fluid_container">
     <div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
+
         <div data-thumb="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/thumbs/1_thumb.jpg" data-src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/1.jpg">
+            <div class="camera_caption fadeIn">
+
+                <div class="captionHeaderDiv">Uniqueness</div>
+                <div class="captionBody">
+                    <div class="captionHeading"><p><b>Honesty, Interety & Fairness</b></p>
+                        <p class="captionDescription">Doreen is a persuit of change nd up gradation.
+                            It is persuing new business opportunities in
+                            the dynamic economic spectrum of Bangladesh & the world.</p>
+                        <p class="captionFooter"> <a href="#">Our All Concerns</a></p>
+                    </div>
+                </div>
+            </div>
+
         </div>
+
 
         <div data-thumb="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/thumbs/6_thumb.jpg" data-src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/6.jpg">
+            <div class="camera_caption fadeIn">
+
+
+
+                <div class="captionHeaderDiv">Uniqueness</div>
+                <div class="captionBody">
+                    <div class="captionHeading"><p><b>Honesty, Interety & Fairness</b></p>
+
+                        <p class="captionDescription">Doreen is a persuit of change nd up gradation.
+                            It is persuing new business opportunities in
+                            the dynamic economic spectrum of Bangladesh & the world.</p>
+                        <p class="captionFooter"> <a href="#">Our All Concerns</a></p>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
         <div data-thumb="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/thumbs/3_thumb.jpg" data-src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/3.jpg">
+            <div class="camera_caption fadeIn">
+
+
+
+                <div class="captionHeaderDiv">Uniqueness</div>
+                <div class="captionBody">
+                    <div class="captionHeading"><p><b>Honesty, Interety & Fairness</b></p>
+
+                        <p class="captionDescription">Doreen is a persuit of change nd up gradation.
+                            It is persuing new business opportunities in
+                            the dynamic economic spectrum of Bangladesh & the world.</p>
+                        <p class="captionFooter"> <a href="#">Our All Concerns</a></p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div data-thumb="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/thumbs/5_thumb.jpg" data-src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/5.jpg">
+            <div class="camera_caption fadeIn">
+
+
+
+                <div class="captionHeaderDiv">Uniqueness</div>
+                <div class="captionBody">
+                    <div class="captionHeading"><p><b>Honesty, Interety & Fairness</b></p>
+
+                        <p class="captionDescription">Doreen is a persuit of change nd up gradation.
+                            It is persuing new business opportunities in
+                            the dynamic economic spectrum of Bangladesh & the world.</p>
+                        <p class="captionFooter"> <a href="#">Our All Concerns</a></p>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
 
-        <div data-thumb="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/thumbs/5_thumb.jpg" data-src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/slides/5.jpg">
-        </div>
     </div>
+
 </div>
+<!-- /slider -->
 
 <div class="container-fluid">
    <div class="row">
