@@ -49,4 +49,17 @@ $contactBox->createOption( array(
     'type' => 'editor'
 ));
 
+// Color Theme
+$colorBox = $titan->createMetaBox( array(
+    'name' => __('Color Theme', 'dcastalia' ),
+    'post_type' => array('enterprise'),
+) );
+$colorBox->createOption( array(
+    'name' => 'Choose color',
+    'id' => 'post_extra_color',
+    'type' => 'color',
+    'desc' => 'Enterprise Banner theme color',
+    'default' => '#555555',
+) );
+
 }

@@ -12,8 +12,8 @@ $titan = TitanFramework::getInstance('wp_dg');
     <div class="row">
         <div class="col-md-8">
             <div class="row banner-wrapper">
-                <div class="banner-img" style="background-image:url('<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', true)[0]; ?>');">
-                    <div class="bluer">
+                <div class="banner-img" style="background:url('<?php echo wp_get_attachment_image_src(get_post_thumbnail_id(), 'full', true)[0]; ?>');">
+                    <div class="bluer" style="background:<?php echo $titan->getOption('post_extra_color'); ?>">
                         <div class="center-btn">
                             <h3><?php
                             $cat = get_the_category();
@@ -27,8 +27,8 @@ $titan = TitanFramework::getInstance('wp_dg');
                 <!--/.banner-img-->
             </div>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-            <div class="row banner-wrapper selected-item">
+        <div class="col-md-4">
+            <div class="row banner-wrapper selected-item" style="background:<?php echo $titan->getOption('post_extra_color'); ?>">
                 <ul>
                     <?php
                 $args = array('category' => $cat_id,'post_type' => 'enterprise');
@@ -66,8 +66,6 @@ $titan = TitanFramework::getInstance('wp_dg');
     </div>
 </div>
 
-
-
 <!--VIEW AREA-->
 <div class="container-fluid top-info">
     <div class="row flexbox">
@@ -96,7 +94,6 @@ $titan = TitanFramework::getInstance('wp_dg');
     </div>
 </div>
 
-
 <!--Simple Text bar Area-->
 <div class="text-bar">
     <h3>
@@ -124,11 +121,11 @@ $titan = TitanFramework::getInstance('wp_dg');
             <ul class="" role="tablist">
                 <?php foreach($text as $item): ?>
                     <li role="presentation" <?php if($loopcount==1) echo "class='active'";?> >
-                        <a href="<?php echo get_the_permalink()." #nav-item- ".$loopcount; ?>" aria-controls="nav-item-<?php echo $loopcount; ?>" role="tab" data-toggle="tab">
+                        <a href="<?php echo get_the_permalink()."#nav-item-".$loopcount; ?>" aria-controls="nav-item-<?php echo $loopcount; ?>" role="tab" data-toggle="tab">
                             <div class="number-box">
                                 <h3><?php echo substr($item['textdate'],0,5); ?></h3></div>
                             <div class="news-text">
-                                <h3><?php echo substr($item['title'],0,15); ?></h3>
+                                <h3><?php echo substr($item['title'],0,25); if(strlen($item['title'])>25) echo ".."; ?></h3>
                             </div>
                         </a>
                     </li>
@@ -145,9 +142,8 @@ $titan = TitanFramework::getInstance('wp_dg');
                     <h3><?php echo $item['title']; ?></h3>
                 </div>
                 <!--/.news-header-->
-                <div class="news-hr">
-                    <?php echo $item['content']; ?>
-                </div>
+                <div class="news-hr"></div>
+                <p><?php echo $item['content']; ?></p>
                 <div class="n-text-wrp">
                     <?php ?>
                 </div>
