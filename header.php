@@ -11,7 +11,8 @@ $titan = TitanFramework::getInstance('wp_dg');
 <!DOCTYPE html>
 <html lang="<?php bloginfo( 'language' ); ?>">
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>"> 
+    <meta charset="<?php bloginfo( 'charset' ); ?>">
+    <meta name=viewport content="width=device-width, initial-scale=1">
     <?php wp_head(); ?>
 </head>
     
@@ -60,7 +61,7 @@ $titan = TitanFramework::getInstance('wp_dg');
                     <div class="menu_logo_cross_container">
                         <div class="cross_search">
                             <div class="menu_cross">
-                                <img src="resource/images/mobile/cross.png">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/mobile/cross.png" />
                             </div>
 
                         </div>
@@ -69,117 +70,7 @@ $titan = TitanFramework::getInstance('wp_dg');
 
                     <div class="main_menu_footer_menu">
                         <div class="main_menu_footer_menu_left">
-                            <ul>
-                                <li class="header_menu">
-                                    <a class="footer_header" href="#">About us</a>
-                                </li>
-
-                                <li><a href="#">Brief History</a></li>
-                                <li><a href="#">Mission Statement</a></li>
-                                <li><a href="#">Board Members</a></li>
-                                <li><a href="#">People &amp; Diversity</a></li>
-                                <li><a href="#">operation Team</a></li>
-
-
-                            </ul>
-                            <ul>
-                                <li class="header_menu">
-                                    <a class="footer_header" href="#">corporate profile</a>
-                                </li>
-                                <li><a href="#">Business Highlights</a></li>
-                                <li><a href="#">Rethinking The Future</a></li>
-                                <li><a href="#">Annual Report</a></li>
-                                <li><a href="#">Circular Economy</a></li>
-
-                            </ul>
-                            <ul class="media_center">
-                                <li class="header_menu">
-                                    <a class="footer_header" href="#">media center</a>
-                                </li>
-                                <li><a href="#">Latest News</a></li>
-                                <li><a href="#">Events</a></li>
-                                <li><a href="#">Achievements</a></li>
-                                <li><a href="#">Publications</a></li>
-                                <li><a href="#">Notice Board</a></li>
-                                <li><a href="#">Downloads</a></li>
-                                <li><a href="#">gallery</a></li>
-                                <li><a href="#">Photo Gallery</a></li>
-                                <li><a href="#">video Gallery</a></li>
-
-
-                            </ul>
-                            <ul>
-                                <li class="header_menu_gallery">
-                                    <a class="footer_header" href="#">gallery</a>
-                                </li>
-                                <li><a href="#">Photo Gallery</a></li>
-                                <li><a href="#">video Gallery</a></li>
-
-
-                            </ul>
-
-                            <ul>
-                                <li class="header_menu">
-                                    <a class="footer_header" href="#">contact</a>
-                                </li>
-                                <li><a href="#">Basic Information</a></li>
-                                <li><a href="#">Location Map</a></li>
-                            </ul>
-
-                        </div>
-
-                        <div class="main_menu_footer_menu_right">
-                            <ul>
-                                <li class="header_menu">
-                                    <a class="footer_header" href="#">products &amp; services</a>
-                                </li>
-                                <li><a href="#">Investment Banking</a></li>
-                                <li><a href="#">Wealth Management</a></li>
-                                <li><a href="#">Fixed Income Business</a></li>
-                                <li><a href="#">Brokerage Business</a></li>
-                                <li><a href="#">Property and Trading Business</a></li>
-                                <li><a href="#">FINI Equity &amp; Sales</a></li>
-                                <li><a href="#">Pledge &amp; Un-pledge of Shares</a></li>
-                                <li><a href="#">IPO Application Processing</a></li>
-                                <li><a href="#">BO Account Openning</a></li>
-                                <li><a href="#">Buying &amp; Selling</a></li>
-
-
-                            </ul>
-                            <ul>
-                                <li class="header_menu">
-                                    <a class="footer_header" href="#">Write to Us</a>
-                                </li>
-
-                            </ul>
-
-
-                            <ul>
-                                <li class="header_menu">
-                                    <a class="footer_header" href="#">Investoer Relations</a>
-                                </li>
-                            </ul>
-
-                            <ul>
-                                <li class="header_menu">
-                                    <a class="footer_header" href="#">reseach &amp; investments</a>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li class="header_menu">
-                                    <a class="footer_header" href="#">partners</a>
-                                </li>
-                            </ul>
-
-
-                            <ul>
-                                <li class="header_menu">
-                                    <a class="footer_header" href="#">CAREER</a>
-                                </li>
-                                <li><a href="#">job Opennings</a></li>
-                                <li><a href="#">Application Form</a></li>
-                                <li><a href="#">CV Upload</a></li>
-                            </ul>
+                            <?php wp_nav_menu( array('menu' => 'Site Main Menu' )); ?>
                         </div>
                     </div>
                     <div class="mobile_social_icon_content">

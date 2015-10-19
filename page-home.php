@@ -34,7 +34,7 @@ for($i=1;$i<=5;$i++){
 ?>
 
 <!-----  Slider ------>
-<div class="fluid_container">
+<div class="fluid_container camera-wrap-container">
     <div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
         
         <?php for($i=1;$i<=5;$i++) : ?>
