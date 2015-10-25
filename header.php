@@ -17,13 +17,19 @@ $titan = TitanFramework::getInstance('wp_dg');
 </head>
     
 <body <?php body_class(); ?>>
+
+<div class="preloader">
+    <div class="loaderinner">
+        <img src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/grey.gif" />
+    </div>
+</div>
     
 <div class="container-fluid topHeader">
     <div class="row">
+<div class="container">
 
-
-<div class="col-xs-9 col-sm-9 col-md-8 col-lg-8"></div>
-        <div class="col-xs-10 col-sm-10 col-md-4 col-lg-4 topDiv">
+<div class="col-xs-9 col-sm-9 col-md-9"></div>
+        <div class="col-xs-10 col-sm-10 col-md-3 topDiv">
     <span class="career"><a href="<?php echo $titan->getOption( 'career_link' ); ?>">Career</a></span>
 
     <a href="<?php echo $titan->getOption( 'download_link' ); ?>"><span class="downloads"></span><span class="downloadsText">Downloads</span></a>
@@ -31,7 +37,7 @@ $titan = TitanFramework::getInstance('wp_dg');
     <a href="#"><span class="search"></span></a><a href="#"><span class="searchText">Search</span></a>
 </div>
 </div>
-
+</div>
 </div>
 
 
@@ -39,16 +45,15 @@ $titan = TitanFramework::getInstance('wp_dg');
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-1"></div>
-       
-        <div class="col-md-3 col-sm-9 col-xs-9 logo">
-             <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" /></a>
+        <div class="container">
+            <div class="col-md-4 col-sm-9 col-xs-9 logo">
+                 <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" /></a>
+</div>
+
+            <div class="col-md-8 topMenu visible-sm visible-md visible-lg">
+                <?php wp_nav_menu( array('menu' => 'Site Main Menu' )); ?>
+</div>
         </div>
-        
-        <div class="col-md-8 topMenu visible-sm visible-md visible-lg">
-            <?php wp_nav_menu( array('menu' => 'Site Main Menu' )); ?>
-        </div>
-        
         
         
          <!--------- Mobile Menu ------------------>

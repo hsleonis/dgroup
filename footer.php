@@ -12,10 +12,10 @@ $titan = TitanFramework::getInstance('wp_dg');
 
 
 <?php if(1) : ?>
-<div class="container footerMenu">
+<div class="container-fluid footerMenu">
     <div class="row">
 
-        <div class="footerWrapper">
+        <div class="footerWrapper container">
             <div class="col-md-2 socialIcons">
             <?php if ( is_active_sidebar( 'footer-1' ) ) : 
                 dynamic_sidebar( 'footer-1' ); 
@@ -56,7 +56,7 @@ $titan = TitanFramework::getInstance('wp_dg');
 <!------- Copy Right ------->
 <div class="container-fluid copyRightContainer">
    <div class="row">
-       <div class="copyRight">
+       <div class="copyRight container">
             <?php echo $titan->getOption( 'copy_info' ); ?>
        </div>
    </div>

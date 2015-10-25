@@ -35,25 +35,25 @@ for($i=1;$i<=5;$i++){
 
 <!-----  Slider ------>
 <div class="fluid_container camera-wrap-container">
-    <div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
+  <!--  <div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
         
-        <?php for($i=1;$i<=5;$i++) : ?>
-        <div data-thumb="<?php echo esc_url( $imageSrcSlide[$i] ); ?>" data-src="<?php echo esc_url( $imageSrcSlide[$i] ); ?>">
+        <?php // for($i=1;$i<=5;$i++) : ?>
+        <div data-thumb="<?php // echo esc_url( $imageSrcSlide[$i] ); ?>" data-src="<?php // echo esc_url( $imageSrcSlide[$i] ); ?>">
             <div class="camera_caption fadeIn">
 
-                <div class="captionHeaderDiv"><?php echo $titan->getOption( 'slide'.$i.'_caption' ); ?></div>
+                <div class="captionHeaderDiv"><?php //echo $titan->getOption( 'slide'.$i.'_caption' ); ?></div>
                 <div class="captionBody">
-                    <div class="captionHeading"><p><b><?php echo $titan->getOption( 'slide'.$i.'_title' ); ?></b></p>
-                        <p class="captionDescription"><?php echo $titan->getOption( 'slide'.$i.'_desc' ); ?></p>
-                        <p class="captionFooter"> <a href="<?php echo $titan->getOption( 'slide'.$i.'_footer_link' ); ?>"><?php echo $titan->getOption( 'slide'.$i.'_footer' ); ?></a></p>
+                    <div class="captionHeading"><p><b><?php //echo $titan->getOption( 'slide'.$i.'_title' ); ?></b></p>
+                        <p class="captionDescription"><?php //echo $titan->getOption( 'slide'.$i.'_desc' ); ?></p>
+                        <p class="captionFooter"> <a href="<?php //echo $titan->getOption( 'slide'.$i.'_footer_link' ); ?>"><?php //echo $titan->getOption( 'slide'.$i.'_footer' ); ?></a></p>
                     </div>
                 </div>
             </div>
 
         </div>
-        <?php endfor; ?>
-    </div>
-
+        <?php //endfor; ?>
+    </div>-->
+<?php echo do_shortcode( '[responsive_slider]' ); ?>
 </div>
 <!-- /slider -->
 
@@ -174,7 +174,7 @@ for($i=1;$i<=5;$i++){
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
-            <div class="text-bar">
+            <div class="text-bar wow fadeInDown">
                 <h3><img src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/b2.png" alt=""/>
                     <?php echo ucsmart($titan->getOption('quote_text')); ?>
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/b3.png" alt=""/></h3>
@@ -188,8 +188,8 @@ for($i=1;$i<=5;$i++){
     <div class="row">
         <div class="plax ccparallax ccparallax-one" style="background-image: url('<?php echo esc_url( $imageSrcPar ); ?>');">
             <div class="parallexContent">
-                <p class="parallexHeading"><?php echo $titan->getOption( 'par_title_text' ); ?></p>
-                <p class="parallexDescription">
+                <p class="parallexHeading wow zoomIn" data-wow-duration="2s"><?php echo $titan->getOption( 'par_title_text' ); ?></p>
+                <p class="parallexDescription wow zoomIn" data-wow-duration="2s">
                     <?php echo $titan->getOption( 'par_sub_text' ); ?>
                 </p>
             </div>
@@ -212,9 +212,10 @@ for($i=1;$i<=5;$i++){
         $args = array( 'posts_per_page' => $titan->getOption( 'post_count' ));
 
         $allposts = get_posts( $args );
+        $wowcount = 0.5;
         foreach ( $allposts as $post ) : setup_postdata( $post ); ?>
 
-        <div class="col-xs-6 col-md-3 mission">
+        <div class="col-xs-6 col-md-3 mission wow fadeInLeft" data-wow-duration="1s" data-wow-delay="<?php echo $wowcount."s"; ?>">
             <div class="test">
                 <a href="<?php the_permalink(); ?>">
                     <?php the_post_thumbnail(array(550,350)); ?>
@@ -228,6 +229,7 @@ for($i=1;$i<=5;$i++){
             </div>
         </div>
         <?php
+            $wowcount+=0.5;
             endforeach; 
             wp_reset_postdata();
         ?>

@@ -26,7 +26,7 @@ $slider->createOption( array(
 ) );
 
 // Slider
-for($i=1;$i<=5;$i++){
+for($i=1;$i<=4;$i++){
     $slider->createOption( array(
         'name' =>  __( 'Slide '.$i, 'dcastalia' ),
         'type' => 'heading',

@@ -1,5 +1,34 @@
 jQuery(document).ready(function ($) {
-
+    
+    new WOW().init();
+    
+    $(".preloader").fadeOut(2000);
+    
+    $(document).on("click","a[href*='http']",function(){
+        $(".preloader").fadeIn(50);
+    });
+    
+    $(".project-menu-ul a").smoothScroll();
+    
+    $("#photo-gallery").imagesLoaded(function(){
+        $("img").animate({
+            'opacity': 1
+        },500);
+        $("#photo-gallery").lightGallery();
+    });
+    
+    $(".mission").imagesLoaded(function(){
+        $("img").animate({
+            'opacity': 1
+        },500);
+    });
+    
+    $(".banner").imagesLoaded(function(){
+        $("img").animate({
+            'opacity': 1
+        },500);
+    });
+    
     $('#camera_wrap_2').camera({
         height: '500px',
         loader: 'none',
@@ -7,6 +36,7 @@ jQuery(document).ready(function ($) {
         thumbnails: true,
         fx: 'simpleFade'
     });
+    
     $(".textileUpperDiv").zoomScroller();
 
     $(".constructionUpperDiv").zoomScroller({
@@ -32,35 +62,8 @@ jQuery(document).ready(function ($) {
     $(".holdingsUpperDiv").zoomScroller({
         animationTime: 500
     });
-    
-
-    $(document)
-    .on('click', '.project-menu a[href*="#"]', function() {
-      if ( this.hash && this.pathname === location.pathname ) {
-        $.bbq.pushState( '#/' + this.hash.slice(1) );
-        return false;
-      }
-    })
-    .ready(function() {
-      $(window).bind('hashchange', function(event) {
-        var tgt = location.hash.replace(/^#\/?/,'');
-        if ( document.getElementById(tgt) ) {
-          $.smoothScroll({scrollTarget: '#' + tgt});
-            console.log(tgt);
-        }
-      });
-
-      $(window).trigger('hashchange');
-    });
-
-/*========================================
-            Light Gallery
-========================================*/
-    $("#photo-gallery").lightGallery();
-
 
     resize_function();
-
 
     function resize_function() {
         $(".mobilemenu_container img").click(function () {
@@ -79,11 +82,8 @@ jQuery(document).ready(function ($) {
 
         });
 
-
-        $(document).ready(function () {
-            $(".search_btn_top img").click(function () {
-                $("#searchContainer").slideToggle("slow");
-            });
+        $(".search_btn_top img").click(function () {
+            $("#searchContainer").slideToggle("slow");
         });
     }
 

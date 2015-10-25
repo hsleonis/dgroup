@@ -31,11 +31,12 @@ $titan = TitanFramework::getInstance('wp_dg');
             <div class="row banner-wrapper selected-item" style="background:<?php echo $titan->getOption('post_extra_color'); ?>">
                 <ul>
                     <?php
-                $args = array('category' => $cat_id,'post_type' => 'enterprise');
+                $title=get_the_title();
+                $args = array('category' => $cat_id,'post_type' => 'enterprise','posts_per_page' => 15);
                 $catlinks = get_posts( $args );
                 foreach ( $catlinks as $post ) : setup_postdata( $post ); ?>
                         <li>
-                            <p>
+                            <p class="<?php if($title===get_the_title()) echo "tab-active"; ?>">
                                 <a href="<?php the_permalink(); ?>">
                                     <?php echo ucsmart(get_the_title()); ?>
                                 </a>
@@ -56,8 +57,12 @@ $titan = TitanFramework::getInstance('wp_dg');
             <ul class="project-menu-ul">
                 <li><a href="#over-view">OVERVIEW</a></li>
                 <li><a href="#management">MANAGEMENT</a></li>
+                <?php if(get_post_meta( get_the_ID(), '_dgn_news', true )): ?>
                 <li><a href="#news-wrapper">RECENT NEWS</a></li>
+                <?php endif; ?>
+                <?php if(get_post_meta( get_the_ID(), '_dg_gallery', true )): ?>
                 <li><a href="#photo-gallery">GALLERY</a></li>
+                <?php endif; ?>
                 <li><a href="#contactandform">CONTACT</a></li>
             </ul>
         </div>
@@ -82,7 +87,7 @@ $titan = TitanFramework::getInstance('wp_dg');
             </div>
         </div>
         <div class="col-md-8">
-            <div class="row view-wrapper">
+            <div class="row">
                 <div class="four-sheraton" id="management">
                     <h3><?php the_title(); ?></h3>
                     <p>
@@ -95,13 +100,15 @@ $titan = TitanFramework::getInstance('wp_dg');
 </div>
 
 <!--Simple Text bar Area-->
-<div class="text-bar">
+<?php if($titan->getOption('post_extra_quote')): ?>
+<div class="text-bar wow fadeIn">
     <h3>
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/b2.png" alt=""/>
         <?php echo ucsmart($titan->getOption('post_extra_quote')); ?>
         <img src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/b3.png" alt=""/>
     </h3>
 </div>
+<?php endif; ?>
 <!--/.text-bar-->
 
 <!--NEWS AREA-->
@@ -203,7 +210,7 @@ $titan = TitanFramework::getInstance('wp_dg');
                 <?php echo $titan->getOption('post_extra_contact'); ?>
             </div>
         </div>
-        <div class="col-md-7 from">
+        <div class="col-md-7 from wow slideInRight">
             <div class="row">
                 <h3>WRITE TO US</h3>
                 <div id="contact-from">

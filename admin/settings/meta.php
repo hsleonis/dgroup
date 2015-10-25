@@ -11,7 +11,7 @@ $titan = TitanFramework::getInstance('wp_dg');
 
 $pageMeta = $titan->createMetaBox( array(
     'name' =>  __( 'Additional information', 'dcastalia' ),
-    'post_type' => array( 'page', 'post', 'enterprise'),
+    'post_type' => array( 'page', 'post', 'enterprise',),
 ) );
 
 // Extra
@@ -23,7 +23,7 @@ $pageMeta->createOption( array(
 $pageMeta->createOption( array(
     'name' => __( 'Description', 'dcastalia' ),
     'id' => 'post_extra_desc',
-    'type' => 'textarea',
+    'type' => 'editor',
     'desc' => __( 'Enter description', 'dcastalia' ),
 ) );
 

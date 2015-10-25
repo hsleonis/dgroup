@@ -62,7 +62,7 @@ function dg_gallery() {
 	$cmb_group = new_cmb2_box( array(
 		'id'           => $prefix . 'metabox',
 		'title'        => __( 'Image Gallery', 'dcastalia' ),
-		'object_types' => array( 'enterprise', ),
+		'object_types' => array( 'enterprise' ),
 	) );
 
 	$group_field_id = $cmb_group->add_field( array(
@@ -101,6 +101,36 @@ function dg_gallery() {
 		'name' => __( 'Image Caption', 'dcastalia' ),
 		'id'   => 'img_cap',
 		'type' => 'text',
+	) );
+
+}
+
+
+add_action( 'cmb2_admin_init', 'dg_download' );
+function dg_download() {
+	$prefix = '_dg_';
+	$cmb_group = new_cmb2_box( array(
+		'id'           => $prefix . 'metabox2',
+		'title'        => __( 'Upload Files', 'dcastalia' ),
+		'object_types' => array( 'download' ),
+	) );
+
+	$group_field_id = $cmb_group->add_field( array(
+		'id'          => $prefix . 'download',
+		'type'        => 'group',
+		'description' => __( 'Upload downloadable files', 'dcastalia' ),
+		'options'     => array(
+			'group_title'   => __( 'File {#}', 'dcastalia' ),
+			'add_button'    => __( 'Add Another File', 'dcastalia' ),
+			'remove_button' => __( 'Remove File', 'dcastalia' ),
+			'sortable'      => true,
+		),
+	) );
+
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => __( 'Select File', 'dcastalia' ),
+		'id'   => 'download',
+		'type' => 'file',
 	) );
 
 }
