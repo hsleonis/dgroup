@@ -113,6 +113,7 @@ blockquote,
 q {
     quotes: none
 }
+a:hover,a:focus,a:active{outline: 0}
 
 blockquote:before,
 blockquote:after,
@@ -170,6 +171,15 @@ a {
     width: auto !important
 }
 
+.responsive-slider.flexslider .flex-control-nav li a {
+    width: 14px !important;
+    height: 6px !important;
+    background: #EEE !important;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+.responsive-slider.flexslider .flex-control-nav li a:hover, .responsive-slider.flexslider .flex-control-nav li a.active {background: #62BB46 !important;}
+
 .career a:hover {
     text-decoration: none;
     color: #fff
@@ -226,7 +236,8 @@ a {
     border: 1px solid #333;
     padding: 5px;
     color: #111;
-    margin-top: 20px
+    margin-top: 20px;
+    height: 31px;
 }
 
 .downloadsText:hover {
@@ -280,12 +291,13 @@ a {
 .topMenu ul li {
     float: left;
     list-style: none;
-    padding-top: 12px;
+    padding-top: 18px;
     margin-left: 30px;
     margin-right: 13px;
+    position: relative;
     line-height: 4;
     color: #fff;
-    border-bottom: 8px solid transparent
+    border-bottom: 4px solid transparent
 }
 
 .topMenu a {
@@ -297,7 +309,7 @@ a {
 }
 
 .topMenu ul li:hover {
-    border-bottom: 8px solid #73bb4d
+    border-bottom: 4px solid #73bb4d
 }
 
 .dropdown {
@@ -377,8 +389,45 @@ ul li ul,
     display: block
 }
 
-img {
+#photo-gallery img,
+#products img,
+.mission img,
+.banner img
+{
     opacity: 0
+}
+
+.lg-outer.dg-products .lg-img-wrap {
+    padding-right: 400px !important;
+}
+
+.lg-outer.dg-products .lg-sub-html{
+    left: auto !important;
+    top: 47px !important;
+    width: 400px !important;
+}
+
+.lg-outer.dg-products .lg-actions .lg-next,
+.lg-outer.dg-products .lg-actions .lg-prev {
+    z-index: 1085 !important;
+}
+
+.preloader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 9999;
+    background: #FFF;
+}
+
+.loaderinner{
+    margin: auto;
+    width: 100px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    position: relative;
 }
 
 .holdingsUpperDiv img {
@@ -590,7 +639,8 @@ img {
     top: 40%;
     height: 20%;
     border: 5px solid #fff;
-    z-index: 400
+    z-index: 400;
+    transition: all .3s ease;
 }
 
 .textile p {
@@ -606,11 +656,13 @@ img {
     width: 40%;
     position: absolute;
     left: 32%;
-    top: 20%;
+    top: calc(55% - 14% + 7px);
     height: 14%;
     border: 3px solid #fff;
     padding-top: 7px;
-    z-index: 400
+    z-index: 400;
+    text-transform: uppercase;
+    transition: all .3s ease;
 }
 
 .hoverDivHoldings b {
@@ -631,7 +683,9 @@ img {
     left: 14%;
     top: 30%;
     height: 14%;
-    z-index: 400
+    text-transform: uppercase;
+    z-index: 400;
+    transition: all .3s ease;
 }
 
 .hotelsBorder b {
@@ -654,11 +708,15 @@ img {
 
 .hoverDivConstruction {
     position: absolute;
-    left: 20%;
+    width: 46%;
     top: 30%;
+    left: 26%;
+    text-transform: uppercase;
     border: 3px solid #fff;
     padding: 15px;
-    z-index: 400
+    z-index: 400;
+    line-height: 29px;
+    transition: all .3s ease;
 }
 
 .construction p {
@@ -675,7 +733,9 @@ img {
     top: 30%;
     height: 15%;
     border-bottom: 3px solid #fff;
-    z-index: 400
+    z-index: 400;
+    text-transform: uppercase;
+    transition: all .3s ease;
 }
 
 .hoverDivMarket b {
@@ -691,9 +751,9 @@ img {
 .market p {
     color: #fff;
     font-size: 20px;
-    text-align: center;
+    text-align: right;
     margin-top: 9%;
-    line-height: .7
+    line-height: 15px;
 }
 
 .textMarket {
@@ -728,7 +788,7 @@ img {
 
 .hoverBottomDivConstruction {
     position: absolute;
-    bottom: 36px;
+    bottom: 15px;
     right: 15px;
     font-size: 13px!important;
     color: #fff;
@@ -759,7 +819,9 @@ img {
     padding-top: 15px;
     text-align: center;
     font-weight: 500;
-    z-index: 400
+    z-index: 400;
+    text-transform: uppercase;
+    transition: all .5s linear;
 }
 
 .internationalTradeUpperDiv {
@@ -778,9 +840,11 @@ img {
     position: absolute;
     left: 26%;
     top: 30%;
+    text-transform: uppercase;
     height: 21%;
     border-bottom: 3px solid #fff;
-    z-index: 400
+    z-index: 400;
+    transition: all .5s linear;
 }
 
 .hoverDivinternationalTrade b {
@@ -815,7 +879,8 @@ img {
     left: 36%;
     top: 30%;
     height: 14%;
-    z-index: 400
+    z-index: 400;
+    transition: all .5s linear;
 }
 
 .hoverDivmanagementService p {
@@ -863,45 +928,74 @@ img {
     background-color: #1f2e2e
 }
 
-.missionThumbnailBottom:hover {
-    background-color: #3d3d29
+.slide-text{
+    bottom: 0px;
+    height: 200px;
+    min-width: 33.3%;
+    position: absolute;
+    background: rgb(255, 255, 255) none repeat scroll 0% 0%;
+    color: rgb(51, 51, 51) !important;
+    right: 0px;
+    padding: 30px 15px
 }
 
+.slide-text p {
+    color: #333;
+    font-size: 12px;
+    text-align: right;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+
+.responsive-slider.flexslider .slide-title a,
+.responsive-slider.flexslider .slide-title a:hover{
+    background: #62BB46 !important;
+}
+
+/*.missionThumbnailBottom:hover {
+    background-color: #3d3d29
+}*/
+
 .text {
-    float: left;
     width: 75%;
     height: 100%;
-    border-right: 1px solid rgba(255, 255, 255, 0.2);
     padding-left: 20px;
-    color: #fff;
+    color: #FFF;
     padding-top: 15px;
-    font-size: 13px
+    font-size: 13px;
+    z-index: 99;
+    position: absolute;
+    left: 0px;
 }
 
 .icon {
-    float: left;
     width: 25%;
     height: 100%;
-    background-color: #71bd41
+    background-color: #71BD41;
+    position: absolute;
+    right: 0px;
+    transition: all 0.5s ease 0s;
 }
 
-.icon:hover {
-    background-color: #00b200
+.missionThumbnailBottom:hover .icon,.icon:hover {
+    width: 100%;
 }
 
 .iconImage {
-    padding-left: 10px;
-    width: 20px;
-    height: 20px;
-    margin-left: 20%;
-    margin-top: 29%;
+    width: 32px;
     background-image: url("../images/common/arrow.png");
-    z-index: 100
+    right: 0px;
+    position: absolute;
+    height: 32px;
+    margin-left: 20%;
+    z-index: 100;
+    margin-top: 15px;
+    margin-right: 5px;
 }
 
 .footerMenu {
     background-color: #42545b;
-    min-height: 400px;
+    height: auto;
     padding-top: 35px
 }
 
@@ -947,8 +1041,9 @@ img {
 }
 
 .others {
-    height: 400px;
+    height: auto;
     padding-top: 21px;
+    padding-bottom: 80px;
     padding-left: 20px;
     color: #fff;
     border-left: 1px solid rgba(255, 255, 255, 0.1);
@@ -1003,7 +1098,8 @@ form input[type="submit"] {
     background-image: url("../images/common/search_icon.png");
     border: 1px solid rgba(255, 255, 255, 0.3);
     position: relative;
-    margin-bottom: 25px
+    margin-bottom: 25px;
+    text-indent: -9999px;
 }
 
 .message {
@@ -1274,8 +1370,8 @@ form input[type="submit"] {
 }
 
 .market {
-    -webkit-transition: all .5s linear;
-    transition: all .5s linear
+    -webkit-transition: all .25s linear;
+    transition: all .25s linear
 }
 
 .hoverDivMarket:hover {
@@ -1507,7 +1603,7 @@ form input[type="submit"] {
 
 .mobilemenu_container img {
     float: right;
-    margin: 25px 20px 25px 0;
+    margin: 45px 20px 25px 0;
     cursor: pointer
 }
 
@@ -1522,7 +1618,6 @@ form input[type="submit"] {
 .menu_logo_cross_container {
     width: 70px;
     float: right;
-    border-bottom: 1px solid rgba(127, 127, 127, 0.1);
     min-height: 80px;
     top: -80px;
     position: relative
@@ -1596,7 +1691,7 @@ form input[type="submit"] {
     text-transform: uppercase;
     width: 100%;
     float: left;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     word-wrap: break-word;
     font-family: 'Roboto', sans-serif;
     font-size: 12px
@@ -1657,7 +1752,7 @@ form input[type="submit"] {
     top: 90px;
     width: 235px;
     padding: 10px;
-    margin-left: -100px
+    left: -25px;
 }
 
 .topMenu ul li ul li {
@@ -1780,6 +1875,42 @@ form input[type="submit"] {
     #searchContainer {
         float: right
     }
+    
+}
+
+@media(max-width:767px) {
+    
+    .menu > li{
+        margin: 10px 0;
+        font-weight: 700;
+        margin: 10px 0;
+    }
+    
+    .menu > li a{margin: 5px 0}
+    
+    .sub-menu{
+        display: block;
+        position:static;
+        top: 0;
+        float: left;
+    }
+    
+    .sub-menu li{
+        width: auto;
+        line-height: 0;
+        padding: 0;
+        line-height: normal;
+        width: 500%;
+        margin:0 0 0 -30px;
+        text-indent: 10px;
+    }
+    
+    .sub-menu li a{
+        font-weight: 300;
+        margin: 0;
+    }
+    
+    .topHeader{display: none}
 }
 
 @media(max-width:490px) {
@@ -1824,7 +1955,8 @@ form input[type="submit"] {
 .shadowDivTextile {
     width: 100%;
     height: 450px;
-    background-color: #EEE;
+    /*background-color: #EEE;*/
+    background-color: red;
     position: absolute;
     z-index: 100;
     opacity: .8
@@ -2041,12 +2173,22 @@ h3 {
 
 .current-menu-ancestor,
 .topMenu>ul li.current-menu-item{
-    border-bottom: 8px solid #73BB4D!important
+    border-bottom: 4px solid #73BB4D!important
 }
 
 .menu-div {
     display: table;
     margin: 0 auto
+}
+
+.project-menu{
+    top: 0px;
+    z-index: 9999;
+    background:#FFF;
+    position: -webkit-sticky;
+    position: sticky;
+    box-shadow: 1px 1px 3px rgba(100,100,100,0.1);
+    z-index: 99;
 }
 
 .project-menu-ul {
@@ -2059,7 +2201,7 @@ h3 {
 .project-menu-ul li {
     float: left;
     margin-left: 125px;
-    padding: 40px 0 0
+    padding: 25px 0 0
 }
 
 .project-menu-ul li:first-child {
@@ -2072,7 +2214,7 @@ h3 {
     font-weight: 400;
     border-bottom: solid 4px transparent;
     padding: 0 0 20px;
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     text-decoration: none;
     display: block
 }
@@ -2347,7 +2489,7 @@ li.active .news-text {
 
 .hoverdiv {
     position: absolute;
-    z-index: 509;
+    z-index: 9;
     cursor: pointer;
     width: 100%;
     height: 0;
@@ -2403,6 +2545,32 @@ li.active .news-text {
 
 .top-info {
     background-color: #c5c5c5
+}
+
+.contact-address {
+    padding: 25px 0;
+    background: #e1dddb;
+    text-align: center
+}
+
+.contact-address p {
+    color: #000;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 13px
+}
+
+.contact-address small {
+    margin-top: 25px;
+    display: block
+}
+
+.contact-address .news-header {
+    margin-bottom: 80px
+}
+
+.contact-address .news-hr {
+    margin-bottom: 10px
 }
 
 .contact-address {
@@ -2516,7 +2684,7 @@ textarea {
 }
 
 .news-bg-color {
-    background: #e1dddb
+    background: #C5C5C5;
 }
 
 .managementarea {
@@ -2604,7 +2772,7 @@ textarea {
     background-color: #FFF;
     width: 100%;
     height: 100%;
-    z-index: 999;
+    z-index: 99999;
 }
 
 .loaderinner{

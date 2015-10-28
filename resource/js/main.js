@@ -11,20 +11,37 @@ jQuery(document).ready(function ($) {
     $(".project-menu-ul a").smoothScroll();
     
     $("#photo-gallery").imagesLoaded(function(){
-        $("img").animate({
+        $("#photo-gallery img").animate({
             'opacity': 1
         },500);
-        $("#photo-gallery").lightGallery();
+        $("#photo-gallery").lightGallery({
+            thumbnail:true,
+            animateThumb: false,
+            showThumbByDefault: false
+        });
+    });
+    
+    $("#products").imagesLoaded(function(){
+        $("#products img").animate({
+            'opacity': 1
+        },500);
+        $("#products").lightGallery({
+            thumbnail:true,
+            animateThumb: false,
+            showThumbByDefault: false,
+            galleryId: 2,
+            addClass: 'dg-products',
+        });
     });
     
     $(".mission").imagesLoaded(function(){
-        $("img").animate({
+        $(".mission img").animate({
             'opacity': 1
         },500);
     });
     
     $(".banner").imagesLoaded(function(){
-        $("img").animate({
+        $(".banner img").animate({
             'opacity': 1
         },500);
     });

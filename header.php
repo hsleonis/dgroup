@@ -51,7 +51,7 @@ $titan = TitanFramework::getInstance('wp_dg');
 </div>
 
             <div class="col-md-8 topMenu visible-sm visible-md visible-lg">
-                <?php wp_nav_menu( array('menu' => 'Site Main Menu' )); ?>
+                <?php wp_nav_menu( array('theme_location' => 'main-menu' )); ?>
 </div>
         </div>
         
@@ -75,7 +75,7 @@ $titan = TitanFramework::getInstance('wp_dg');
 
                     <div class="main_menu_footer_menu">
                         <div class="main_menu_footer_menu_left">
-                            <?php wp_nav_menu( array('menu' => 'Site Main Menu' )); ?>
+                            <?php wp_nav_menu( array('theme_location' => 'main-menu' )); ?>
                         </div>
                     </div>
                     <div class="mobile_social_icon_content">

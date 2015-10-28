@@ -89,7 +89,7 @@ for($i=1;$i<=5;$i++){
 <div class="container-fluid">
     <div class="row">
         <a href="<?php echo $titan->getOption( 'feat3_link' ); ?>">
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 hotel">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 hotel">
             <div class="shadowDivHotel" style="<?php echo 'background-color: '.$titan->getOption( 'feat3_color' ).';' ?>"></div>
             <div class="hotelUpperDiv">
                 <img src="<?php echo esc_url( $imageSrcfeat[3] ); ?>">
@@ -101,7 +101,7 @@ for($i=1;$i<=5;$i++){
         </div>
         </a>
         <a href="<?php echo $titan->getOption( 'feat4_link' ); ?>">
-        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 construction">
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 construction">
             <div class="shadowDivConstruction" style="<?php echo 'background-color: '.$titan->getOption( 'feat4_color' ).';' ?>"></div>
             <div class="constructionUpperDiv">
 
@@ -109,15 +109,18 @@ for($i=1;$i<=5;$i++){
 
 
                 <div class="hoverDivConstruction">
-                    <p><b><?php echo $titan->getOption( 'feat4_title1_text' ); ?></b></p>
+                    <p>
+                        <?php echo $titan->getOption( 'feat4_title1_text' ); ?>
+                        <b><?php echo $titan->getOption( 'feat4_title2_text' ); ?></b>
+                    </p>
                 </div>
-                <p class="hoverBottomDiv"><?php echo $titan->getOption( 'feat4_title2_text' ); ?></p>
+                <p class="hoverBottomDiv"></p>
                 <p class="hoverBottomDivConstruction"><?php echo $titan->getOption( 'feat4_sub_text' ); ?></p>
             </div>
         </div>
         </a>
         <a href="<?php echo $titan->getOption( 'feat5_link' ); ?>">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 market">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 market">
                     <div class="shadowDivMarket" style="<?php echo 'background-color: '.$titan->getOption( 'feat5_color' ).';' ?>"></div>
             <div class="marketUpperDiv">
                 <img src="<?php echo esc_url( $imageSrcfeat[5] ); ?>">
@@ -128,12 +131,9 @@ for($i=1;$i<=5;$i++){
             </div>
         </div>
         </a>
-    </div>
-</div>
-<div class="container-fluid">
-    <div class="row">
+
         <a href="<?php echo $titan->getOption( 'feat6_link' ); ?>">
-            <div class="col-md-4 col-xs-12 powerGeneration">
+            <div class="col-md-4 col-xs-6 powerGeneration">
                 <div class="shadowDivPower" style="<?php echo 'background-color: '.$titan->getOption( 'feat6_color' ).';' ?>"></div>
                 <div class="powerGenerationUpperDiv">
                     <img src="<?php echo esc_url( $imageSrcfeat[6] ); ?>">
@@ -145,7 +145,7 @@ for($i=1;$i<=5;$i++){
             </div>
         </a>
         <a href="<?php echo $titan->getOption( 'feat7_link' ); ?>">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 internationalTrade">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 internationalTrade">
                 <div class="shadowDivTrade" style="<?php echo 'background-color: '.$titan->getOption( 'feat7_color' ).';' ?>"></div>
                 <div class="internationalTradeUpperDiv">
                     <img src="<?php echo esc_url( $imageSrcfeat[7] ); ?>">
@@ -157,7 +157,7 @@ for($i=1;$i<=5;$i++){
             </div>
         </a>
         <a href="<?php echo $titan->getOption( 'feat8_link' ); ?>">
-            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 managementService">
+            <div class="col-lg-4 col-md-4 col-sm-6 col-xs-6 managementService">
                 <div class="shadowDivManagement" style="<?php echo 'background-color: '.$titan->getOption( 'feat8_color' ).';' ?>"></div>
                 <div class="managementServiceUpperDiv">
                     <img src="<?php echo esc_url( $imageSrcfeat[8] ); ?>">

@@ -11,13 +11,10 @@ if ( file_exists( dirname( __FILE__ ) . '/init.php' ) ) {
 	require_once dirname( __FILE__ ) . 'init.php';
 }
 
-add_action( 'cmb2_admin_init', 'dg_news' );
+/*add_action( 'cmb2_admin_init', 'dg_news' );
 function dg_news() {
 	$prefix = '_dgn_';
 
-	/**
-	 * Repeatable Field Groups
-	 */
 	$cmb_group = new_cmb2_box( array(
 		'id'           => $prefix . 'metabox',
 		'title'        => __( 'News', 'dcastalia' ),
@@ -54,7 +51,7 @@ function dg_news() {
 		'type' => 'text_date',
 	) );
 
-}
+}*/
 
 add_action( 'cmb2_admin_init', 'dg_gallery' );
 function dg_gallery() {
@@ -105,6 +102,54 @@ function dg_gallery() {
 
 }
 
+add_action( 'cmb2_admin_init', 'dg_products' );
+function dg_products() {
+	$prefix = '_dg_';
+	$cmb_group = new_cmb2_box( array(
+		'id'           => $prefix . 'metabox3',
+		'title'        => __( 'Products & Services', 'dcastalia' ),
+		'object_types' => array( 'enterprise' ),
+	) );
+
+	$group_field_id = $cmb_group->add_field( array(
+		'id'          => $prefix . 'products',
+		'type'        => 'group',
+		'description' => __( 'Enterprise products and services', 'dcastalia' ),
+		'options'     => array(
+			'group_title'   => __( 'Image {#}', 'dcastalia' ),
+			'add_button'    => __( 'Add Another Image', 'dcastalia' ),
+			'remove_button' => __( 'Remove Image', 'dcastalia' ),
+			'sortable'      => true,
+		),
+	) );
+
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name'       => __( 'Image Title', 'dcastalia' ),
+		'id'         => 'title',
+		'type'       => 'text',
+		// 'repeatable' => true,
+	) );
+
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name'        => __( 'Description', 'dcastalia' ),
+		'description' => __( 'Write a short description for this image', 'dcastalia' ),
+		'id'          => 'desc',
+		'type'        => 'wysiwyg',
+	) );
+
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => __( 'Select Image', 'dcastalia' ),
+		'id'   => 'img',
+		'type' => 'file',
+	) );
+
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => __( 'Image Caption', 'dcastalia' ),
+		'id'   => 'img_cap',
+		'type' => 'text',
+	) );
+
+}
 
 add_action( 'cmb2_admin_init', 'dg_download' );
 function dg_download() {

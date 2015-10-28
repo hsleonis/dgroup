@@ -28,11 +28,11 @@ $titan = TitanFramework::getInstance('wp_dg');
             </div>
         </div>
         <div class="col-md-4">
-            <div class="row banner-wrapper selected-item" style="background:<?php echo $titan->getOption('post_extra_color'); ?>">
+            <div class="row banner-wrapper selected-item <?php echo $cat[0]->slug; ?> " style="background:<?php echo $titan->getOption('post_extra_color'); ?>">
                 <ul>
                     <?php
                 $title=get_the_title();
-                $args = array('category' => $cat_id,'post_type' => 'enterprise','posts_per_page' => 15);
+                $args = array('category' => $cat_id,'post_type' => 'enterprise','posts_per_page' => 25);
                 $catlinks = get_posts( $args );
                 foreach ( $catlinks as $post ) : setup_postdata( $post ); ?>
                         <li>
@@ -57,8 +57,8 @@ $titan = TitanFramework::getInstance('wp_dg');
             <ul class="project-menu-ul">
                 <li><a href="#over-view">OVERVIEW</a></li>
                 <li><a href="#management">MANAGEMENT</a></li>
-                <?php if(get_post_meta( get_the_ID(), '_dgn_news', true )): ?>
-                <li><a href="#news-wrapper">RECENT NEWS</a></li>
+                <?php if(get_post_meta( get_the_ID(), '_dg_products', true )): ?>
+                <li><a href="#products">PRODUCTS</a></li>
                 <?php endif; ?>
                 <?php if(get_post_meta( get_the_ID(), '_dg_gallery', true )): ?>
                 <li><a href="#photo-gallery">GALLERY</a></li>
@@ -111,82 +111,59 @@ $titan = TitanFramework::getInstance('wp_dg');
 <?php endif; ?>
 <!--/.text-bar-->
 
-<!--NEWS AREA-->
+<!--products-->
 <?php
-    $text = get_post_meta( get_the_ID(), '_dgn_news', true );
+    $text = get_post_meta( get_the_ID(), '_dg_products', true );
     if($text):
-    $loopcount = 1;
 ?>
-<div class="container-fluid news-wrapper" id="news-wrapper">
-    <div class="col-md-6">
-        <div class="news-header">
-            <h3>RECENT NEWS</h3>
-        </div>
-        <!--/.news-header-->
-
-        <div class="news-box">
-            <ul class="" role="tablist">
-                <?php foreach($text as $item): ?>
-                    <li role="presentation" <?php if($loopcount==1) echo "class='active'";?> >
-                        <a href="<?php echo get_the_permalink()."#nav-item-".$loopcount; ?>" aria-controls="nav-item-<?php echo $loopcount; ?>" role="tab" data-toggle="tab">
-                            <div class="number-box">
-                                <h3><?php echo substr($item['textdate'],0,5); ?></h3></div>
-                            <div class="news-text">
-                                <h3><?php echo substr($item['title'],0,25); if(strlen($item['title'])>25) echo ".."; ?></h3>
-                            </div>
-                        </a>
-                    </li>
-                    <?php $loopcount++; endforeach; ?>
-            </ul>
-        </div>
-        <!--/.news-box-->
-
-    </div>
-    <div class="col-md-6 news-display tab-content">
-        <?php $loopcount=1;foreach($text as $item): ?>
-            <div role="tabpanel" class="tab-pane <?php if($loopcount==1) echo " active ";?> news-view" id="nav-item-<?php echo $loopcount; ?>">
-                <div class="news-header">
-                    <h3><?php echo $item['title']; ?></h3>
-                </div>
-                <!--/.news-header-->
-                <div class="news-hr"></div>
-                <p><?php echo $item['content']; ?></p>
-                <div class="n-text-wrp">
-                    <?php ?>
-                </div>
-                <!--/.n-text-wrp-->
-            </div>
-            <!--/.news-view-->
-            <?php $loopcount++; endforeach; ?>
-    </div>
-
-</div>
-<!--/#news-wrapper-->
-<?php endif; ?>
-    <!-- /news -->
-
-<!--Simple Text bar Area-->
 <div class="text-bar b-color">
-    <h3>PHOTO GALLERY</h3>
+    <h3>PRODUCTS &amp; SERVICES</h3>
 </div>
-<!--/.text-bar-->
+<div class="container-fluid">
+    <div class="row">
+        <ul id="products">
+            <?php foreach($text as $item): ?>
+                <li class="col-md-4 col-xs-6" data-src="<?php echo $item['img']; ?>" data-sub-html="<h4><?php echo $item['title']; ?></h4><p><?php echo $item['desc']; ?></p>" >
+                    <a href="#">
+                        <div class="row pg">
+
+                            <div class="hoverdiv">
+                                <p>
+                                    <?php echo $item['title']; ?>
+                                </p>
+                            </div>
+
+                            <img src="<?php echo $item['img']; ?>" class="img-responsive" alt="" />
+
+                        </div>
+                    </a>
+                </li>
+                <?php endforeach; ?>
+        </ul>
+    </div>
+</div>
+<?php endif; ?>
+
 
 <!--PHOTO GALLERY-->
 <?php
     $text = get_post_meta( get_the_ID(), '_dg_gallery', true );
     if($text):
 ?>
+<div class="text-bar b-color">
+    <h3>PHOTO GALLERY</h3>
+</div>
 <div class="container-fluid">
     <div class="row">
         <ul id="photo-gallery">
             <?php foreach($text as $item): ?>
-                <li class="col-md-4 col-xs-6" data-src="<?php echo $item['img']; ?>">
+                <li class="col-md-4 col-xs-6" data-src="<?php echo $item['img']; ?>" data-sub-html="<h4><?php echo $item['title']; ?></h4><p><?php echo $item['desc']; ?></p>" >
                     <a href="#">
                         <div class="row pg">
 
                             <div class="hoverdiv">
                                 <p>
-                                    <?php echo $item['desc']; ?>
+                                    <?php echo $item['title']; ?>
                                 </p>
                             </div>
 
