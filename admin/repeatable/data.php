@@ -159,7 +159,7 @@ function dg_download() {
 		'title'        => __( 'Upload Files', 'dcastalia' ),
 		'object_types' => array( 'download' ),
 	) );
-
+    
 	$group_field_id = $cmb_group->add_field( array(
 		'id'          => $prefix . 'download',
 		'type'        => 'group',
@@ -170,6 +170,12 @@ function dg_download() {
 			'remove_button' => __( 'Remove File', 'dcastalia' ),
 			'sortable'      => true,
 		),
+	) );
+    
+    $cmb_group->add_group_field( $group_field_id, array(
+		'name'       => __( 'File Title', 'dcastalia' ),
+		'id'         => 'title',
+		'type'       => 'text',
 	) );
 
 	$cmb_group->add_group_field( $group_field_id, array(

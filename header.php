@@ -26,7 +26,7 @@ $titan = TitanFramework::getInstance('wp_dg');
     
 <div class="container-fluid topHeader">
     <div class="row">
-<div class="container">
+        <div class="container">
 
 <div class="col-xs-9 col-sm-9 col-md-9"></div>
         <div class="col-xs-10 col-sm-10 col-md-3 topDiv">
@@ -34,12 +34,23 @@ $titan = TitanFramework::getInstance('wp_dg');
 
     <a href="<?php echo $titan->getOption( 'download_link' ); ?>"><span class="downloads"></span><span class="downloadsText">Downloads</span></a>
 
-    <a href="#"><span class="search"></span></a><a href="#"><span class="searchText">Search</span></a>
-</div>
-</div>
-</div>
+    <a href="#" data-toggle="modal" data-target="#myModal"><span class="search"></span></a><a href="#" data-toggle="modal" data-target="#myModal"><span class="searchText">Search</span></a>
+    </div>
+        </div>
+    </div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade full-modal" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div id="search-wrapper" class="modal-dialog search-form" role="document">
+    <div class="modal-content search-form">
+        <form id="form-area" action="<?php ?>" method="get">
+            <input type="text" name="search" placeholder="Search Here"/>
+            <input type="submit" value="SUBMIT"/>
+        </form>
+    </div>
+  </div>
+</div>
 
                     <!------- Header Menu -------->
 
@@ -59,7 +70,7 @@ $titan = TitanFramework::getInstance('wp_dg');
          <!--------- Mobile Menu ------------------>
 
             <div class="mobilemenu_container visible-xs">
-                <img src="resource/images/mobile/black_menu.png">
+                <img src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/mobile/black_menu.png">
 
                 <div class="menu_section">
 

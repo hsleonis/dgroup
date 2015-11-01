@@ -8,7 +8,6 @@
 // Included,in alphabetical order
 require('settings/meta.php');
 require('settings/opt.php');
-require('settings/slider.php');
 require('repeatable/data.php');
 require('theme/career.php');
 require('theme/downloads.php');

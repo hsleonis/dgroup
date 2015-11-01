@@ -21,13 +21,13 @@ if ( is_numeric( $imageID ) ) {
     $imageAttachment = wp_get_attachment_image_src( $imageID, 'full' );
     $imageSrcPar = $imageAttachment[0];
 }
-$imageSrcSlide = array();
-for($i=1;$i<=5;$i++){
-    $imageID = $titan->getOption( 'slide'.$i.'_img' );
-    $imageSrcSlide[$i] = $imageID;
+$imageSrcThumb = array();
+for($i=1;$i<=4;$i++){
+    $imageID = $titan->getOption( 'thumb'.$i.'_img' );
+    $imageSrcThumb[$i] = $imageID;
     if ( is_numeric( $imageID ) ) {
         $imageAttachment = wp_get_attachment_image_src( $imageID, 'full' );
-        $imageSrcSlide[$i] = $imageAttachment[0];
+        $imageSrcThumb[$i] = $imageAttachment[0];
     }
 }
 
@@ -35,24 +35,6 @@ for($i=1;$i<=5;$i++){
 
 <!-----  Slider ------>
 <div class="fluid_container camera-wrap-container">
-  <!--  <div class="camera_wrap camera_magenta_skin" id="camera_wrap_2">
-        
-        <?php // for($i=1;$i<=5;$i++) : ?>
-        <div data-thumb="<?php // echo esc_url( $imageSrcSlide[$i] ); ?>" data-src="<?php // echo esc_url( $imageSrcSlide[$i] ); ?>">
-            <div class="camera_caption fadeIn">
-
-                <div class="captionHeaderDiv"><?php //echo $titan->getOption( 'slide'.$i.'_caption' ); ?></div>
-                <div class="captionBody">
-                    <div class="captionHeading"><p><b><?php //echo $titan->getOption( 'slide'.$i.'_title' ); ?></b></p>
-                        <p class="captionDescription"><?php //echo $titan->getOption( 'slide'.$i.'_desc' ); ?></p>
-                        <p class="captionFooter"> <a href="<?php //echo $titan->getOption( 'slide'.$i.'_footer_link' ); ?>"><?php //echo $titan->getOption( 'slide'.$i.'_footer' ); ?></a></p>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-        <?php //endfor; ?>
-    </div>-->
 <?php echo do_shortcode( '[responsive_slider]' ); ?>
 </div>
 <!-- /slider -->
@@ -65,7 +47,8 @@ for($i=1;$i<=5;$i++){
           <div class="textileUpperDiv">
               <img src="<?php echo esc_url( $imageSrcfeat[1] ); ?>">
               <div class="hoverDivTextile">
-                  <p><?php echo $titan->getOption( 'feat1_title1_text' ); ?></p>
+                  <p><b><?php echo $titan->getOption( 'feat1_title1_text' ); ?></b></p>
+                  <p><?php echo $titan->getOption( 'feat1_title2_text' ); ?></p>
               </div>
               <p class="hoverBottomDiv"><?php echo $titan->getOption( 'feat1_sub_text' ); ?></p>
           </div>
@@ -150,7 +133,8 @@ for($i=1;$i<=5;$i++){
                 <div class="internationalTradeUpperDiv">
                     <img src="<?php echo esc_url( $imageSrcfeat[7] ); ?>">
                     <div class="hoverDivinternationalTrade">
-                        <p><b><?php echo $titan->getOption( 'feat7_title1_text' ); ?></b></p> <p><?php echo $titan->getOption( 'feat7_title2_text' ); ?></p>
+                        <p><?php echo $titan->getOption( 'feat7_title1_text' ); ?></p>
+                        <p><b><?php echo $titan->getOption( 'feat7_title2_text' ); ?></b></p>
                     </div>
                     <!--<p class="hoverBottomDiv">Investment & capital market</p>-->
                 </div>
@@ -162,7 +146,8 @@ for($i=1;$i<=5;$i++){
                 <div class="managementServiceUpperDiv">
                     <img src="<?php echo esc_url( $imageSrcfeat[8] ); ?>">
                     <div class="hoverDivmanagementService">
-                      <p><?php echo $titan->getOption( 'feat8_title1_text' ); ?></p>
+                      <p><b><?php echo $titan->getOption( 'feat8_title1_text' ); ?></b></p>
+                      <p><?php echo $titan->getOption( 'feat8_title2_text' ); ?></p>
                     </div>
                 </div>
             </div>
@@ -209,18 +194,14 @@ for($i=1;$i<=5;$i++){
 <div class="container">
     <div class="row">
     <?php
-        $args = array( 'posts_per_page' => $titan->getOption( 'post_count' ));
-
-        $allposts = get_posts( $args );
-        $wowcount = 0.5;
-        foreach ( $allposts as $post ) : setup_postdata( $post ); ?>
-
+        $wowcount = 0.3;
+        for($i=1;$i<=4;$i++) : ?>
         <div class="col-xs-6 col-md-3 mission wow fadeInLeft" data-wow-duration="1s" data-wow-delay="<?php echo $wowcount."s"; ?>">
             <div class="test">
-                <a href="<?php the_permalink(); ?>">
-                    <?php the_post_thumbnail(array(550,350)); ?>
+                <a href="<?php echo $titan->getOption( 'thumb'.$i.'_link' ); ?>">
+                    <img class="img-responsive" src="<?php echo esc_url( $imageSrcThumb[$i] ); ?>">
                     <div class="missionThumbnailBottom">
-                        <div class="text"><?php the_title(); ?></div>
+                        <div class="text"><?php echo $titan->getOption( 'thumb'.$i.'_title' ); ?></div>
                         <div class="icon">
                             <div class="iconImage"></div>
                         </div>
@@ -230,8 +211,7 @@ for($i=1;$i<=5;$i++){
         </div>
         <?php
             $wowcount+=0.5;
-            endforeach; 
-            wp_reset_postdata();
+            endfor;
         ?>
     </div>
 </div>

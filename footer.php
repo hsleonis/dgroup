@@ -12,7 +12,7 @@ $titan = TitanFramework::getInstance('wp_dg');
 
 
 <?php if(1) : ?>
-<div class="container-fluid footerMenu">
+<div class="container-fluid footerMenu hidden-xs">
     <div class="row">
 
         <div class="footerWrapper container">

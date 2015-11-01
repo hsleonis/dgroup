@@ -8,21 +8,6 @@
 $titan = TitanFramework::getInstance('wp_dg');
 ?>
 
-    
-<!--BANNER AREA-->    
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-md-12">
-        <div class="row">
-            <div class="banner">
-                <?php the_post_thumbnail('full',array('class'=>'img-responsive')); ?>
-            </div>
-        </div>    
-        </div>
-    </div>
-</div>  
-    
-
 <!--VIEW AREA-->
 <div class="container-fluid">
 <div class="row news-bg-color flexbox">

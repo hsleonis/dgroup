@@ -12,7 +12,7 @@ $titan = TitanFramework::getInstance('wp_dg');
 /**
  * Slider settings
  */
-$adminPanel = $titan->createAdminPanel( array(
+/*$adminPanel = $titan->createAdminPanel( array(
     'name' => __( 'Slider Options', 'dcastalia' ),
     'parent' => 'doreen-options',
 ) );
@@ -70,4 +70,4 @@ for($i=1;$i<=4;$i++){
         'type' => 'save',
     ) );
     
-}
+}*/

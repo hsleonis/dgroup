@@ -10,9 +10,54 @@ $adminPanel = $titan->createAdminPanel( array(
     'name' => __( 'Doreen Options', 'dcastalia' ),
     'id' => 'doreen-options',
 ) );
+    
+/* General settings */
+$generalTab = $adminPanel->createTab( array(
+    'name' => __( 'General', 'dcastalia' ),
+) );
+
+$generalTab->createOption( array(
+    'type' => 'save',
+) );
+    
+$generalTab->createOption( array(
+    'name' => __( 'Header', 'dcastalia' ),
+    'type' => 'heading',
+));
+    
+$generalTab->createOption( array(
+    'name' => __( 'Career Link', 'dcastalia' ),
+    'id' => 'career_link',
+    'type' => 'text',
+    'desc' => __( 'Enter career button link with http://', 'dcastalia' ),
+) );
+$generalTab->createOption( array(
+    'name' => __( 'Download Link', 'dcastalia' ),
+    'id' => 'download_link',
+    'type' => 'text',
+    'desc' => __( 'Enter download button link with http://', 'dcastalia' ),
+) );
+$generalTab->createOption( array(
+    'name' => __( 'Footer', 'dcastalia' ),
+    'type' => 'heading',
+));
+$generalTab->createOption( array(
+    'name' => __( 'Copyright Info', 'dcastalia' ),
+    'id' => 'copy_info',
+    'type' => 'editor',
+    'desc' => __( 'Enter copyright information', 'dcastalia' ),
+) );
+
+$generalTab->createOption( array(
+    'type' => 'save',
+) );
 
 $homeTab = $adminPanel->createTab( array(
-    'name' => __( 'Home', 'dcastalia' ),
+    'name' => __( 'Featured', 'dcastalia' ),
+) );
+
+$homeTab->createOption( array(
+    'type' => 'save',
 ) );
 
 // Featured
@@ -62,104 +107,104 @@ for($i=1;$i<=8;$i++){
     ) );
 }
 
-// Quote
 $homeTab->createOption( array(
-    'name' =>  __( 'Quote', 'dcastalia' ),
-    'type' => 'heading',
-));
-$homeTab->createOption( array(
-    'name' => __( 'Text', 'dcastalia' ),
-    'id' => 'quote_text',
-    'type' => 'text',
-    'desc' => __( 'Enter quotation', 'dcastalia' ),
+    'type' => 'save',
 ) );
 
-// Parallax
-$homeTab->createOption( array(
-    'name' => __( 'Parallax Section', 'dcastalia' ),
-    'type' => 'heading',
-));
-$homeTab->createOption( array(
+
+/* Parallax */
+$parTab = $adminPanel->createTab( array(
+    'name' => __( 'Paralax', 'dcastalia' ),
+) );
+
+$parTab->createOption( array(
+    'type' => 'save',
+) );
+
+$parTab->createOption( array(
     'name' => __( 'Header Text', 'dcastalia' ),
     'id' => 'par_title_text',
     'type' => 'text',
     'desc' => __( 'Enter heading text', 'dcastalia' ),
 ) );
-$homeTab->createOption( array(
+$parTab->createOption( array(
     'name' => __( 'Subheader Text', 'dcastalia' ),
     'id' => 'par_sub_text',
     'type' => 'text',
     'desc' => __( 'Enter subheading text', 'dcastalia' ),
 ) );
-$homeTab->createOption( array(
+$parTab->createOption( array(
     'name' =>  __( 'Background Image', 'dcastalia' ),
     'id' => 'par_img',
     'type' => 'upload',
     'desc' =>  __( 'Upload image','dcastalia' ),
 ) );
-    
-// Posts
-$homeTab->createOption( array(
-    'name' =>  __( 'Posts', 'dcastalia' ),
+
+// Quote
+$parTab->createOption( array(
+    'name' =>  __( 'Quote', 'dcastalia' ),
     'type' => 'heading',
 ));
-$homeTab->createOption( array(
+$parTab->createOption( array(
+    'name' => __( 'Text', 'dcastalia' ),
+    'id' => 'quote_text',
+    'type' => 'text',
+    'desc' => __( 'Enter quotation', 'dcastalia' ),
+) );    
+
+$parTab->createOption( array(
+    'type' => 'save',
+) );
+    
+/* Thumbs */
+$thumbTab = $adminPanel->createTab( array(
+    'name' => __( 'Thumbnails', 'dcastalia' ),
+) );
+
+$thumbTab->createOption( array(
+    'type' => 'save',
+) );
+
+$thumbTab->createOption( array(
     'name' => __( 'Header Text', 'dcastalia' ),
     'id' => 'post_title_text',
     'type' => 'text',
     'desc' => __( 'Enter heading text', 'dcastalia' ),
 ) );
-$homeTab->createOption( array(
+$thumbTab->createOption( array(
     'name' => __( 'Subheader Text', 'dcastalia' ),
     'id' => 'post_sub_text',
     'type' => 'text',
     'desc' => __( 'Enter subheading text', 'dcastalia' ),
 ) );
-$homeTab->createOption( array(
-    'name' =>  __( 'Posts', 'dcastalia' ),
-    'id' => 'post_count',
-    'type' => 'number',
-    'desc' =>  __( 'Enter number of posts to show', 'dcastalia' ),
-    'default' => '4',
-    'max' => '12',
-) );
+    
+for($i=1;$i<=4;$i++){
+     $thumbTab->createOption( array(
+        'name' =>  __( 'Thumbnail '.$i, 'dcastalia' ),
+        'type' => 'heading',
+    ));
+    $thumbTab->createOption( array(
+        'name' =>  __( 'Image', 'dcastalia' ),
+        'id' => 'thumb'.$i.'_img',
+        'type' => 'upload',
+        'desc' =>  __( 'Upload image', 'dcastalia' ),
+        'size' => 'full',
+    ) );
+    $thumbTab->createOption( array(
+        'name' => __( 'Title', 'dcastalia' ),
+        'id' => 'thumb'.$i.'_title',
+        'type' => 'text',
+        'desc' => __( 'Enter thumbnail title', 'dcastalia' ),
+    ) );
+    $thumbTab->createOption( array(
+        'name' => __( 'Link', 'dcastalia' ),
+        'id' => 'thumb'.$i.'_link',
+        'type' => 'text',
+        'desc' => __( 'Thumbnail hyperlink with http://', 'dcastalia' ),
+    ) );
+}
 
-$homeTab->createOption( array(
-    'type' => 'save',
-) );
-
-/* General settings */
-$generalTab = $adminPanel->createTab( array(
-    'name' => __( 'General', 'dcastalia' ),
-) );
-$generalTab->createOption( array(
-    'name' => __( 'Header', 'dcastalia' ),
-    'type' => 'heading',
-));
-$generalTab->createOption( array(
-    'name' => __( 'Career Link', 'dcastalia' ),
-    'id' => 'career_link',
-    'type' => 'text',
-    'desc' => __( 'Enter career button link with http://', 'dcastalia' ),
-) );
-$generalTab->createOption( array(
-    'name' => __( 'Download Link', 'dcastalia' ),
-    'id' => 'download_link',
-    'type' => 'text',
-    'desc' => __( 'Enter download button link with http://', 'dcastalia' ),
-) );
-$generalTab->createOption( array(
-    'name' => __( 'Footer', 'dcastalia' ),
-    'type' => 'heading',
-));
-$generalTab->createOption( array(
-    'name' => __( 'Copyright Info', 'dcastalia' ),
-    'id' => 'copy_info',
-    'type' => 'editor',
-    'desc' => __( 'Enter copyright information', 'dcastalia' ),
-) );
-
-$generalTab->createOption( array(
+$thumbTab->createOption( array(
     'type' => 'save',
 ) );
     

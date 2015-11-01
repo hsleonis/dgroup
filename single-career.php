@@ -1,43 +1,26 @@
 <?php
 /*
+ Career page
  License: GPL v3
  Author: MD. Hasan Shahriar
 */
 
-$titan = TitanFramework::getInstance('wp_dg');
-$title = get_the_title();
-
- $args = array(
-	'type'                     => 'news',
-	'child_of'                 => 0,
-	'parent'                   => '',
-	'orderby'                  => 'name',
-	'order'                    => 'ASC',
-	'hide_empty'               => 1,
-	'hierarchical'             => 1,
-	'exclude'                  => '',
-	'include'                  => '',
-	'number'                   => '',
-	'taxonomy'                 => 'newscat',
-	'pad_counts'               => false 
-    ); 
-    $list = get_categories( $args );
+get_header();
+while(have_posts()):the_post();
+    $title = get_the_title();
 ?>
-<?php //print_r($list); ?>
 
-<!-- news -->
-<div class="container-fluid news-wrapper flexbox" id="news-wrapper">
-    <div class="col-md-6">
-    <?php foreach($list as $cat): ?>
+<div class="container-fluid news-wrapper" id="news-wrapper">
+    <div class="col-md-4">
         <div class="news-header">
-            <h3><?php echo $cat->cat_name; ?></h3>
+            <h3>CAREER</h3>
         </div>
         <!--/.news-header-->
 
         <div class="news-box">
             <ul class="">
                 <?php
-                    $args = array('newscat' => $cat->cat_name, 'post_type' => 'news','posts_per_page' => -1);
+                    $args = array('post_type' => 'career','posts_per_page' => -1);
                     $catlinks = get_posts( $args );
                     foreach ( $catlinks as $post ) : setup_postdata( $post );
                 ?>
@@ -57,16 +40,24 @@ $title = get_the_title();
             </ul>
         </div>
         <!--/.news-box-->
-<?php endforeach; ?>
     </div>
-    <div class="col-md-6 news-display tab-content">
+    <div class="col-md-8 news-display tab-content">
         <div role="tabpanel" class="tab-pane active news-view" id="nav-item">
             <div class="news-header">
                 <h3><?php the_title(); ?></h3>
             </div>
             <!--/.news-header-->
             <div class="news-hr"></div>
-            <p><?php the_content(); ?></p>
+            <div class="career-content">
+                <?php echo get_the_content(); ?>
+            </div>
+            <div id="contact-from">
+                <div class="news-header">
+                    <h3>APPLY ONLINE</h3>
+                </div>
+                <div class="news-hr"></div>
+                <?php echo do_shortcode('[contact-form-7 id="587" title="Career"]'); ?>
+            </div>
             <div class="n-text-wrp">
                 <?php ?>
             </div>
@@ -75,5 +66,8 @@ $title = get_the_title();
         <!--/.news-view-->
     </div>
 </div>
-<!--/#news-wrapper-->
-<!-- /news -->
+
+<?php
+endwhile;
+
+get_footer();
