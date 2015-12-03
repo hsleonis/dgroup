@@ -80,28 +80,55 @@ jQuery(document).ready(function ($) {
         animationTime: 500
     });
 
-    resize_function();
 
-    function resize_function() {
-        $(".mobilemenu_container img").click(function () {
-            $('.menu_section').css({
-                'display': 'block'
-            });
-            $('body').css({
-                'overflow': 'visible'
-            })
+    $(".mobilemenu_container>img").click(function () {
+        slideRight('.menu_section');
+        $('.menu_cross').css({
+            'display': 'block'
+        });
+        $('body').css({
+            'overflow': 'visible'
+        });
+    });
+
+    $(".menu_cross img").click(function () {
+        slideLeft('.menu_section');
+        $('.menu_cross').css({
+            'display': 'none'
         });
 
-        $(".menu_cross img").click(function () {
-            $('.menu_section').css({
+    });
+
+    $(".search_btn_top img").click(function () {
+        $("#searchContainer").slideToggle("slow");
+    });
+
+    
+    $( ".menu li" ).click(function() {
+        $('.menu li .sub-menu').css({
                 'display': 'none'
-            });
-
         });
-
-        $(".search_btn_top img").click(function () {
-            $("#searchContainer").slideToggle("slow");
+        
+        var menu = $( this);
+        menu.find('.sub-menu').css({
+                'display': 'block'
         });
+    });
+    
+    // Slide to Left
+    function slideLeft(item) {
+        $(item).animate({
+            left: -100 + '%'
+        }, 500);
+    }
+
+    // Slide to Bottom
+    function slideRight(item) {
+        $(item).animate({
+            left: 0
+        }, 500);
     }
 
 });
+
+

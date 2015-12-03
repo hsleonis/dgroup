@@ -42,24 +42,24 @@ for($i=1;$i<=4;$i++){
 <div class="container-fluid">
    <div class="row">
       <a href="<?php echo $titan->getOption( 'feat1_link' ); ?>">
-          <div class="col-md-8 col-xs-12 textile">
+          <div class="col-md-8 col-xs-6 textile">
           <div class="shadowDivTextile" style="<?php echo 'background-color: '.$titan->getOption( 'feat1_color' ).';' ?>"></div>
           <div class="textileUpperDiv">
               <img src="<?php echo esc_url( $imageSrcfeat[1] ); ?>">
-              <div class="hoverDivTextile">
+              <div class="hoverDivTextileFix">
                   <p><b><?php echo $titan->getOption( 'feat1_title1_text' ); ?></b></p>
                   <p><?php echo $titan->getOption( 'feat1_title2_text' ); ?></p>
               </div>
               <p class="hoverBottomDiv"><?php echo $titan->getOption( 'feat1_sub_text' ); ?></p>
           </div>
-      </div>
+          </div>
       </a>
        <a href="<?php echo $titan->getOption( 'feat2_link' ); ?>">
-           <div class="col-md-4 col-xs-12 holdings">
+           <div class="col-md-4 col-xs-6 holdings">
            <div class="shadowDivHoldings" style="<?php echo 'background-color: '.$titan->getOption( 'feat2_color' ).';' ?>"></div>
            <div class="holdingsUpperDiv">
                <img src="<?php echo esc_url( $imageSrcfeat[2] ); ?>">
-               <div class="hoverDivHoldings">
+               <div class="hoverDivHoldingsFix">
                    <p><?php echo $titan->getOption( 'feat2_title2_text' ); ?></p>
                    <p><b><?php echo $titan->getOption( 'feat2_title1_text' ); ?></b></p>
                </div>
@@ -76,7 +76,7 @@ for($i=1;$i<=4;$i++){
             <div class="shadowDivHotel" style="<?php echo 'background-color: '.$titan->getOption( 'feat3_color' ).';' ?>"></div>
             <div class="hotelUpperDiv">
                 <img src="<?php echo esc_url( $imageSrcfeat[3] ); ?>">
-                <div class="hoverDivHotel">
+                <div class="hoverDivHotelFix">
                     <p class="hotelsBorder"><b><?php echo $titan->getOption( 'feat3_title1_text' ); ?></b></p><p><?php echo $titan->getOption( 'feat3_title2_text' ); ?></p>
                 </div>
                 <div class="hoverBottomDiv"><?php echo $titan->getOption( 'feat3_sub_text' ); ?></div>
@@ -91,7 +91,7 @@ for($i=1;$i<=4;$i++){
                 <img src="<?php echo esc_url( $imageSrcfeat[4] ); ?>">
 
 
-                <div class="hoverDivConstruction">
+                <div class="hoverDivConstructionFix">
                     <p>
                         <?php echo $titan->getOption( 'feat4_title1_text' ); ?>
                         <b><?php echo $titan->getOption( 'feat4_title2_text' ); ?></b>
@@ -107,7 +107,7 @@ for($i=1;$i<=4;$i++){
                     <div class="shadowDivMarket" style="<?php echo 'background-color: '.$titan->getOption( 'feat5_color' ).';' ?>"></div>
             <div class="marketUpperDiv">
                 <img src="<?php echo esc_url( $imageSrcfeat[5] ); ?>">
-                <div class="hoverDivMarket">
+                <div class="hoverDivMarketFix">
                     <p><b><?php echo $titan->getOption( 'feat5_title1_text' ); ?></b></p><p class="textMarket"><?php echo $titan->getOption( 'feat5_title2_text' ); ?></p>
                 </div>
                 <p class="hoverBottomDiv"><?php echo $titan->getOption( 'feat5_sub_text' ); ?></p>
@@ -120,7 +120,7 @@ for($i=1;$i<=4;$i++){
                 <div class="shadowDivPower" style="<?php echo 'background-color: '.$titan->getOption( 'feat6_color' ).';' ?>"></div>
                 <div class="powerGenerationUpperDiv">
                     <img src="<?php echo esc_url( $imageSrcfeat[6] ); ?>">
-                    <div class="hoverDivpowerGeneration">
+                    <div class="hoverDivpowerGenerationFix">
                         <p><b><?php echo $titan->getOption( 'feat6_title1_text' ); ?></b></p>
                     </div>
                     <p class="hoverBottomDiv"><?php echo $titan->getOption( 'feat6_sub_text' ); ?></p>
@@ -132,11 +132,10 @@ for($i=1;$i<=4;$i++){
                 <div class="shadowDivTrade" style="<?php echo 'background-color: '.$titan->getOption( 'feat7_color' ).';' ?>"></div>
                 <div class="internationalTradeUpperDiv">
                     <img src="<?php echo esc_url( $imageSrcfeat[7] ); ?>">
-                    <div class="hoverDivinternationalTrade">
+                    <div class="hoverDivinternationalTradeFix">
                         <p><?php echo $titan->getOption( 'feat7_title1_text' ); ?></p>
                         <p><b><?php echo $titan->getOption( 'feat7_title2_text' ); ?></b></p>
                     </div>
-                    <!--<p class="hoverBottomDiv">Investment & capital market</p>-->
                 </div>
             </div>
         </a>
@@ -145,7 +144,7 @@ for($i=1;$i<=4;$i++){
                 <div class="shadowDivManagement" style="<?php echo 'background-color: '.$titan->getOption( 'feat8_color' ).';' ?>"></div>
                 <div class="managementServiceUpperDiv">
                     <img src="<?php echo esc_url( $imageSrcfeat[8] ); ?>">
-                    <div class="hoverDivmanagementService">
+                    <div class="hoverDivmanagementServiceFix">
                       <p><b><?php echo $titan->getOption( 'feat8_title1_text' ); ?></b></p>
                       <p><?php echo $titan->getOption( 'feat8_title2_text' ); ?></p>
                     </div>
@@ -216,5 +215,4 @@ for($i=1;$i<=4;$i++){
     </div>
 </div>
 
-<?php
-    get_footer();
+<?php get_footer();

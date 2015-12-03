@@ -54,14 +54,14 @@ $titan = TitanFramework::getInstance('wp_dg');
 
                     <!------- Header Menu -------->
 
-<div class="container-fluid">
+<div class="container-fluid h-menu-style">
     <div class="row">
         <div class="container">
-            <div class="col-md-4 col-sm-9 col-xs-9 logo">
+            <div class="col-sm-4 logo">
                  <a href="<?php bloginfo( 'url' ); ?>"><img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" /></a>
 </div>
 
-            <div class="col-md-8 topMenu visible-sm visible-md visible-lg">
+            <div class="col-sm-8 topMenu visible-sm visible-md visible-lg">
                 <?php wp_nav_menu( array('theme_location' => 'main-menu' )); ?>
 </div>
         </div>
@@ -69,16 +69,18 @@ $titan = TitanFramework::getInstance('wp_dg');
         
          <!--------- Mobile Menu ------------------>
 
-            <div class="mobilemenu_container visible-xs">
+            <div class="mobilemenu_container visible-xs p-fixed">
                 <img src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/mobile/black_menu.png">
+                
+                <div class="menu_cross">
+                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/mobile/cross.png" />
+                </div>
 
                 <div class="menu_section">
 
                     <div class="menu_logo_cross_container">
                         <div class="cross_search">
-                            <div class="menu_cross">
-                                <img src="<?php echo get_stylesheet_directory_uri(); ?>/resource/images/mobile/cross.png" />
-                            </div>
+                            
 
                         </div>
 

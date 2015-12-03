@@ -23,3 +23,665 @@ Use it to make something cool, have fun, and share what you've learned with othe
  |_____/ \_____/_/    \_\_____/   |_/_/    \_\______|_____/_/    \_\
  
 */
+
+
+/*All Media Query*/
+/*First Media Query Section*/
+@media screen and (max-width:1170px) {
+form input[type="text"] {  width: 80px;  }
+
+.missionThumbnailBottom {  right: 0;  }
+
+.others {  padding-left: 8px;  }
+
+.footerWrapper{padding-bottom: 38px !important;}
+
+}
+
+@media screen and (max-width:990px) {
+.missionThumbnailBottom {
+	right: 0;
+}
+
+.missionThumbnail1 {
+	margin-bottom: 15px;
+}
+
+.missionThumbnail2 {
+	margin-bottom: 15px;
+}
+
+.parallexDescription {
+	line-height: 1.5;
+}
+
+    
+}
+
+@media screen and (max-width:910px) {
+form input[type="text"] {
+	width: 90px;
+}
+
+.parallexDescription {
+	line-height: 2;
+}
+
+.hoverDivHoldings {
+	padding-top: 0;
+}
+
+.construction p {
+	margin-top: 3%;
+}
+
+.hoverDivMarket {
+	height: 17%;
+}
+
+.hoverDivmanagementService p:last-child {
+	margin-top: 7px;
+}
+}
+
+@media screen and (max-width:764px) {
+.missionThumbnailBottom {
+	right: 0;
+}
+
+.missionThumbnail1 {
+	margin-bottom: 15px;
+}
+
+.camera_msg_cont h6 {
+	font-size: 8px;
+}
+
+.camera_msg_cont h1 {
+	font-size: 15px;
+}
+
+.camera_msg_cont p {
+	font-size: 11px;
+}
+
+.camera_msg_cont span {
+	font-size: 13px;
+}
+}
+
+@media screen and (max-width:600px) {
+.missionThumbnailBottom {
+	right: 0;
+}
+
+.missionThumbnail1 {
+	margin-bottom: 15px;
+}
+
+.missionThumbnail2 {
+	margin-bottom: 15px;
+}
+
+.camera_msg_cont h6 {
+	font-size: 7px;
+}
+
+.camera_msg_cont h1 {
+	font-size: 13px;
+}
+
+.camera_msg_cont p {
+	font-size: 10px;
+}
+
+.camera_msg_cont span {
+	font-size: 11px;
+}
+}
+
+
+@media screen and (max-width:550px) {
+.missionThumbnailBottom {
+	right: 0;
+}
+
+.camera_msg_cont {
+	visibility: hidden;
+}
+
+.camera_next {
+	display: none;
+}
+
+.camera_prev {display: none;}
+    
+.hoverDivMarketFix p{font-size: 12px}
+    
+}
+
+@media screen and (max-width:499px) {
+.missionThumbnailBottom {
+	right: 0;
+}
+
+.parallexDescription {
+	font-size: 10px;
+	line-height: 1.5;
+}
+}
+
+@media screen and (max-width:460px) {
+.missionThumbnailBottom {
+	right: 0;
+}
+
+.hoverDivinternationalTrade {
+	width: 53%;
+	height: 23%;
+}
+}
+
+@media screen and (max-width:400px) {
+.missionThumbnailBottom {right: 0;}
+
+.hoverDivTextileFix{top:22%}    
+    
+.hoverDivHoldingsFix{top: 35%}
+    
+.hoverDivHoldingsFix p{font-size: 17px}  
+    
+.hoverDivmanagementServiceFix p:first-child,.hoverDivinternationalTradeFix p{font-size: 14px}
+    
+.hoverDivmanagementServiceFix p:last-child{font-size: 14px}
+}
+
+@media screen and (max-width:360px) {
+form input[type="text"] {
+	width: 100px;
+}
+
+.missionThumbnailBottom {
+	right: 0;
+}
+}
+
+@media screen and (max-width:320px) {
+form input[type="text"] {
+	width: 82px;
+}
+
+.others {
+	padding-left: 12px;
+}
+
+.missionThumbnailBottom {
+	right: 0;
+}
+}
+/*************Section Of Random Media Query**************/
+@media(max-width:768px) {
+#searchContainer {
+	float: right;
+}
+}
+
+@media(max-width:767px) {
+.logo{margin-top: 0}
+
+.menu > li {
+	margin: 10px 0;
+	font-weight: 700;
+	margin: 10px 0;
+}
+
+.menu > li a {
+	margin: 5px 0;
+}
+
+.sub-menu {
+	display: none;
+	position: static;
+	top: 0;
+	float: left;
+}
+
+.sub-menu li {
+	width: auto;
+	line-height: 0;
+	padding: 0;
+	line-height: normal;
+	width: 500%;
+	margin: 0 0 0 -30px;
+	text-indent: 10px;
+}
+
+.sub-menu li a {
+	font-weight: 300;
+	margin: 0;
+}
+
+.topHeader {
+	display: none;
+}
+}
+
+@media(max-width:490px) {
+/*.main_menu_footer_menu ul {
+	width: 40%;
+}*/
+}
+
+@media(max-width:360px) {
+#searchContainer {
+	float: left;
+	position: absolute;
+	margin-left: 5px;
+}
+
+.top_menu {
+	margin-top: -29px;
+}
+}
+
+
+/*************Section 2 Of Random Media Query************/
+@media screen and (max-width:1215px) {
+.menu-div {
+	width: 70%;
+}
+
+.project-menu-ul li {
+	margin-left: 90px;
+}
+    
+.topDiv{
+    width: 300px;
+    }
+    
+form input[type="submit"]{
+    margin-right:-20px;
+    }
+
+}
+
+@media screen and (max-width:1185px) {
+.menu-div {
+	width: 65%;
+}
+
+.project-menu-ul li {
+	margin-left: 50px;
+}
+}
+
+@media screen and (max-width:1040px) {
+    
+.menu-div {width: 70%;}
+    
+}
+
+
+
+@media screen and (max-width:992px) {
+
+#menu-main{padding-top: 5px}
+
+.sub-menu{top: 78px !important;}
+
+.news-view {margin-top: 55px;width: 100%;}
+
+.pg>img {width: 100%;}
+    
+.market,.shadowDivMarket{height: 300px}
+    
+/*Responsive Fixing*/
+.hoverDivTextileFix{
+    top:35%;
+    width: 250px;
+}   
+.textile p{font-size: 20px}
+.hoverDivTextileFix p:first-child{margin-top:20px}
+.hoverDivTextileFix p:last-child{margin:8px 0 20px 0}
+    
+.hoverDivHoldingsFix p{font-size: 18px}
+    
+.hoverDivHotelFix p{font-size: 18px}
+    
+.hoverDivMarketFix{top: 25%}
+    
+.hoverDivMarketFix p{font-size: 16px}
+.market b{font-size: 16px}
+    
+    .banner-wrapper {height: auto;padding-bottom: 20px}
+    
+}
+
+@media(min-width:992px) and (max-width:1295px) {
+.managementarea {
+	text-align: center;
+}
+
+.managementarea div img {
+	margin: 0 auto;
+}
+
+.text-wrp {
+	float: none;
+	top: 0;
+	margin: 0 auto;
+}
+
+.managementarea h4,.managementarea span {
+	text-align: center !important;
+}
+
+.spn-text {
+	text-align: center;
+}
+}
+
+@media screen and (max-width:960px) {
+.menu-div {
+	width: 75%;
+}
+
+.project-menu-ul li {
+	margin-left: 50px;
+}
+}
+
+@media screen and (max-width:895px) {
+.menu-div {
+	width: 75%;
+}
+
+.project-menu-ul li {
+	margin-left: 30px;
+}
+}
+
+@media screen and (max-width:790px) {
+.menu-div {width: 80%;}
+    
+}
+
+@media screen and (max-width:767px) {
+    .current-menu-ancestor, .topMenu > ul li.current-menu-item{
+        border-bottom: none !important;
+    }   
+    
+    .sub-menu > li{
+        margin: 0px;
+        width: 100% !important;
+        border-left: 0px solid rgba(36, 40, 62, 0.3);
+    }
+    
+    .main_menu_footer_menu ul > li{
+        width: 100%;
+    }
+    
+    .menu-main-1{
+        /*margin-left: 15px*/
+        margin: 0 auto;
+    }
+    
+}
+
+@media screen and (max-width:740px) {
+.menu-div {
+	width: 80%;
+}
+}
+
+@media screen and (max-width:735px) {
+.menu-div {
+	width: 85%;
+}
+}
+
+@media screen and (max-width:695px) {
+.menu-div {
+	width: 90%;
+}
+}
+
+@media screen and (max-width:660px) {
+.menu-div {
+	width: 145px;
+	padding-top: 40px;
+}
+
+.project-menu-ul li {
+	float: none;
+	margin: 0;
+	text-align: center;
+	padding: 0;
+}
+
+.text-bar img {
+	display: none;
+}
+}
+
+@media screen and (max-width:600px) {
+.text-bar {
+	letter-spacing: 0;
+}
+
+.number-box h3,.news-text h3 {
+	font-size: 19px !important;
+}
+}
+
+@media screen and (max-width:515px) {
+.number-box h3,.news-text h3 {  font-size: 16px !important;  }
+}
+
+@media screen and (max-width:530px) {
+.managementarea {text-align: center;}
+
+.managementarea div img {  margin: 0 auto;  }
+
+.text-wrp {
+	float: none;
+	top: 0;
+	margin: 0 auto;
+}
+
+.managementarea h4,.managementarea span {text-align: center !important;  }
+
+.spn-text {text-align: center;}
+
+.missionThumbnailBottom{
+	width: 100%;
+	height: 35px;
+	font-weight: 400;
+}
+
+.iconImage{
+	margin-top: 5px;
+	margin-right:0;
+}
+
+.icon{
+	width: 35px;
+}
+
+.text{padding-top: 12px}
+     
+.hoverDivHotelFix,
+.hoverDivConstructionFix,
+.hoverDivMarketFix,
+.hoverDivpowerGenerationFix,
+.hoverDivinternationalTradeFix,
+.hoverDivmanagementServiceFix,
+.hoverDivHoldingsFix,
+.hoverDivTextileFix{border: none;width: 100%;}
+
+}
+
+
+/*********Second Media Query Section******/
+@media screen and (max-width:490px) {
+.text-bar h3 {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.four-sheraton h3 {
+	font-size: 19px;
+}
+
+.number-box h3,.news-text h3 {
+	font-size: 14px !important;
+}
+}
+
+@media screen and (max-width:430px) {
+.four-sheraton {
+	padding: 40px;
+}
+
+.four-sheraton h3 {
+	font-size: 16px;
+}
+
+.number-box h3,.news-text h3 {
+	font-size: 13px !important;
+}
+}
+
+@media screen and (max-width:380px) {
+.center-btn {width: 85%;}
+
+.hoverDivTextileFix p{font-size: 17px}
+    
+.hoverDivHoldingsFix p{font-size: 17px}   
+}
+/*******************************
+      Bootstrap Queries size
+********************************/
+@media screen and (max-width:768px) {
+    
+.h-menu-style{
+    position: fixed;
+    top: 0px;
+    z-index: 999;
+    background: #FFF;
+    width: 100%;
+}
+
+.menu > li{margin: 0}    
+.menu > li a{margin: 0}
+    
+.p-fixed{position: fixed}
+    
+.logo img{
+    height: 32px;
+    width: 169px;
+    margin-top: 12px;
+    margin-left: 35px;
+    }    
+
+.slide-text{
+    display: none;
+    }
+    ul li:hover ul, .dropdown{
+        display: none
+    }
+    
+    .holdings p{margin-top: 1%}
+    
+    .responsive-slider.flexslider .slides img{height: 250px !important;}
+    
+     .camera-wrap-container {height: 250px;}
+    
+    .slide-text p{font-size: 12px}
+    
+    .responsive-slider.flexslider .slide-title a {font-size: 15px;}
+    
+    .footerMenu,.hoverBottomDiv,.hoverBottomDivConstruction{display: none}
+    
+    .hoverDivTextile{ top: 40px; border: 0; line-height: 25px;}
+    
+         .shadowDivManagement,.managementService,.internationalTrade,.shadowDivTrade,.shadowDivPower,.powerGeneration,.market,.shadowDivMarket,.shadowDivConstruction,.construction,.hotel,.shadowDivHotel,.textile,.holdings,.shadowDivHoldings,.shadowDivTextile{height: 200px;}
+    
+    .hoverDivHoldings{top: 70px;border: 0;}
+    
+    .internationalTradeUpperDiv, .powerGenerationUpperDiv, .managementServiceUpperDiv .zs-img {background-size: cover !important;height: 200px !important;}
+    
+    .zs-img {background-size: cover !important;height: 200px !important;}
+    
+    .hoverDivConstruction{top: 18%;border: 0;}
+    
+     .hoverDivpowerGeneration,.hoverDivMarket{border: 0}
+    
+    .hoverDivmanagementService{width: 50%;left: 25%;top: 45px;}
+    
+    .hoverDivTextileFix{
+        border: none;
+        width: 100%;
+        top: 62px;
+    }
+    
+    .hoverDivmanagementServiceFix{top: 19%}
+    
+}
+/*Mobile Thumbnail Imahe fixing*/
+@media screen and (max-width:599px) {.test img{min-height: auto;min-width: auto}}
+
+
+@media screen and (min-width:600px) and (max-width:790px){
+    .test img{min-height: 100%;min-width: 100%}
+}
+
+@media screen and (min-width:768px) and (max-width:992px){
+    .topMenu{height: 60px}
+    .hoverDivHoldings{top:30%}
+    
+    .holdings p{margin-top: 1%}
+    
+    .topMenu a {font-size: 14px;}
+    
+    .logo img{margin-top: 8px}
+    
+    .responsive-slider.flexslider .slides img{height: 320px !important;}
+    
+     .camera-wrap-container {height: 320px;}
+    
+    .slide-text p{font-size: 12px}
+    
+    .responsive-slider.flexslider .slide-title a {font-size: 15px;}
+    
+    .hoverDivTextile{top: 23%}
+    
+     .hotel,.shadowDivConstruction,.construction,.shadowDivHotel,.shadowDivHoldings,.holdings,.textile,.shadowDivTextile{height: 300px;}
+    
+     .footerMenu,.hoverBottomDiv,.hoverBottomDivConstruction{display: none}
+    
+    .test {height: auto;}
+    
+
+}
+
+
+@media screen and (max-width:1200px) {
+    .topMenu ul li{
+        margin-left: 5px;
+        margin-right: 10px;
+/*        padding: 0;*/
+    }
+    
+    .construction p{
+        font-size: 15px;
+    }
+
+	.footerWrapper{padding-bottom: 23px}
+    
+}
+
+
+/*************************************************************
+    NEW RESPONSIVE CSS STYLE FOR HOME PAGE THUMBNAIL SECTION
+*************************************************************/
