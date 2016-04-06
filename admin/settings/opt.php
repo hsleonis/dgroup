@@ -61,7 +61,7 @@ $homeTab->createOption( array(
 ) );
 
 // Featured
-for($i=1;$i<=8;$i++){
+for($i=1;$i<=10;$i++){
     
     $homeTab->createOption( array(
         'name' =>  __( 'Featured Item '.$i, 'dcastalia' ),
