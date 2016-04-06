@@ -7,7 +7,7 @@ get_header();
 
 $titan = TitanFramework::getInstance('wp_dg');
 $imageSrcfeat = array();
-for($i=1;$i<=8;$i++){
+for($i=1;$i<=10;$i++){
     $imageID = $titan->getOption( 'feat'.$i.'_img' );
     $imageSrcfeat[$i] = $imageID;
     if ( is_numeric( $imageID ) ) {
@@ -47,8 +47,8 @@ for($i=1;$i<=4;$i++){
           <div class="textileUpperDiv">
               <img src="<?php echo esc_url( $imageSrcfeat[1] ); ?>">
               <div class="hoverDivTextileFix">
-                  <p><b><?php echo $titan->getOption( 'feat1_title1_text' ); ?></b></p>
-                  <p><?php echo $titan->getOption( 'feat1_title2_text' ); ?></p>
+                  <p><?php echo $titan->getOption( 'feat1_title1_text' ); ?></p>
+                  <p><b><?php echo $titan->getOption( 'feat1_title2_text' ); ?></b></p>
               </div>
               <p class="hoverBottomDiv"><?php echo $titan->getOption( 'feat1_sub_text' ); ?></p>
           </div>
@@ -77,7 +77,8 @@ for($i=1;$i<=4;$i++){
             <div class="hotelUpperDiv">
                 <img src="<?php echo esc_url( $imageSrcfeat[3] ); ?>">
                 <div class="hoverDivHotelFix">
-                    <p class="hotelsBorder"><b><?php echo $titan->getOption( 'feat3_title1_text' ); ?></b></p><p><?php echo $titan->getOption( 'feat3_title2_text' ); ?></p>
+                    <p class="hotelsBorder"><?php echo $titan->getOption( 'feat3_title1_text' ); ?></p>
+                    <p><b><?php echo $titan->getOption( 'feat3_title2_text' ); ?></b></p>
                 </div>
                 <div class="hoverBottomDiv"><?php echo $titan->getOption( 'feat3_sub_text' ); ?></div>
             </div>
@@ -108,7 +109,8 @@ for($i=1;$i<=4;$i++){
             <div class="marketUpperDiv">
                 <img src="<?php echo esc_url( $imageSrcfeat[5] ); ?>">
                 <div class="hoverDivMarketFix">
-                    <p><b><?php echo $titan->getOption( 'feat5_title1_text' ); ?></b></p><p class="textMarket"><?php echo $titan->getOption( 'feat5_title2_text' ); ?></p>
+                    <p><?php echo $titan->getOption( 'feat5_title1_text' ); ?></p>
+                    <p class="textMarket"><b><?php echo $titan->getOption( 'feat5_title2_text' ); ?></b></p>
                 </div>
                 <p class="hoverBottomDiv"><?php echo $titan->getOption( 'feat5_sub_text' ); ?></p>
             </div>
@@ -136,6 +138,7 @@ for($i=1;$i<=4;$i++){
                         <p><?php echo $titan->getOption( 'feat7_title1_text' ); ?></p>
                         <p><b><?php echo $titan->getOption( 'feat7_title2_text' ); ?></b></p>
                     </div>
+                    <!--<p class="hoverBottomDiv">Investment & capital market</p>-->
                 </div>
             </div>
         </a>
@@ -145,15 +148,44 @@ for($i=1;$i<=4;$i++){
                 <div class="managementServiceUpperDiv">
                     <img src="<?php echo esc_url( $imageSrcfeat[8] ); ?>">
                     <div class="hoverDivmanagementServiceFix">
-                      <p><b><?php echo $titan->getOption( 'feat8_title1_text' ); ?></b></p>
-                      <p><?php echo $titan->getOption( 'feat8_title2_text' ); ?></p>
+                      <p><?php echo $titan->getOption( 'feat8_title1_text' ); ?></p>
+                      <p><b><?php echo $titan->getOption( 'feat8_title2_text' ); ?></b></p>
                     </div>
                 </div>
             </div>
         </a>
     </div>
 </div>
-
+<div class="container-fluid">
+   <div class="row">
+      <a href="<?php echo $titan->getOption( 'feat9_link' ); ?>">
+          <div class="col-md-8 col-xs-6 textile">
+          <div class="shadowDivTextile" style="<?php echo 'background-color: '.$titan->getOption( 'feat9_color' ).';' ?>"></div>
+          <div class="textileUpperDiv">
+              <img src="<?php echo esc_url( $imageSrcfeat[9] ); ?>">
+              <div class="hoverDivTextileFix">
+                  <p><?php echo $titan->getOption( 'feat9_title1_text' ); ?></p>
+                  <p><b><?php echo $titan->getOption( 'feat9_title2_text' ); ?></b></p>
+              </div>
+              <p class="hoverBottomDiv"><?php echo $titan->getOption( 'feat9_sub_text' ); ?></p>
+          </div>
+          </div>
+      </a>
+       <a href="<?php echo $titan->getOption( 'feat10_link' ); ?>">
+           <div class="col-md-4 col-xs-6 holdings">
+           <div class="shadowDivHoldings" style="<?php echo 'background-color: '.$titan->getOption( 'feat10_color' ).';' ?>"></div>
+           <div class="holdingsUpperDiv">
+               <img src="<?php echo esc_url( $imageSrcfeat[10] ); ?>">
+               <div class="hoverDivHoldingsFix">
+                   <p><?php echo $titan->getOption( 'feat10_title2_text' ); ?></p>
+                   <p><b><?php echo $titan->getOption( 'feat10_title1_text' ); ?></b></p>
+               </div>
+               <p class="hoverBottomDiv"><?php echo $titan->getOption( 'feat10_sub_text' ); ?></p>
+           </div>
+       </div>
+       </a>
+   </div>
+</div>
 <!-- Quote -->
 <div class="container-fluid">
     <div class="row">
